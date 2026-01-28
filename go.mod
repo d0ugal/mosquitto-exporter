@@ -2,7 +2,7 @@ module github.com/sapcc/mosquitto-exporter
 
 go 1.24.0
 
-toolchain go1.24.4
+toolchain go1.25.6
 
 require (
 	github.com/d0ugal/promexporter v0.0.0-00010101000000-000000000000
