@@ -1,0 +1,46 @@
+# Mosquitto Exporter Configuration Example
+# This file shows all available configuration options with their defaults
+
+# Server configuration
+server:
+  host: "0.0.0.0"           # Host to bind the HTTP server to
+  port: 9234                # Port for the metrics endpoint (default: 9234)
+  enable_web_ui: true       # Enable the web UI dashboard at /
+  enable_health: true       # Enable the /health endpoint
+
+# Logging configuration
+logging:
+  level: "info"             # Log level: debug, info, warn, error
+  format: "json"            # Log format: json, text
+
+# Metrics collection configuration
+metrics:
+  collection:
+    default_interval: "30s" # Default collection interval (not used by Mosquitto exporter - it's event-driven)
+
+# Mosquitto broker configuration
+mosquitto:
+  broker_endpoint: "tcp://127.0.0.1:1883"  # MQTT broker endpoint
+  username: ""                              # MQTT username (leave empty if not needed)
+  password: ""                              # MQTT password (leave empty if not needed)
+  client_id: ""                             # MQTT client ID (leave empty for auto-generated)
+
+  # TLS/SSL configuration
+  tls:
+    enabled: false                          # Enable TLS/SSL
+    cert_file: ""                           # Path to TLS certificate file
+    key_file: ""                            # Path to TLS key file
+    insecure_skip_verify: false             # Skip TLS certificate verification (insecure!)
+
+# OpenTelemetry tracing configuration (optional)
+tracing:
+  enabled: false                            # Enable distributed tracing
+  service_name: "mosquitto-exporter"        # Service name for tracing
+  endpoint: "http://localhost:4318/v1/traces"  # OTLP HTTP endpoint
+  headers: {}                               # Additional headers for OTLP requests
+
+# Pyroscope profiling configuration (optional)
+profiling:
+  enabled: false                            # Enable continuous profiling
+  service_name: "mosquitto-exporter"        # Service name for profiling
+  server_address: "http://10.10.10.2:4040" # Pyroscope server address
