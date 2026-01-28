@@ -81,7 +81,9 @@ func loadFromEnv(cfg *MosquittoExporterConfig) error {
 	cfg.BaseConfig = config.BaseConfig{}
 
 	// Apply generic environment variables
-	config.ApplyGenericEnvVars(&cfg.BaseConfig)
+	if err := config.ApplyGenericEnvVars(&cfg.BaseConfig); err != nil {
+		return fmt.Errorf("failed to apply generic environment variables: %w", err)
+	}
 
 	// Apply Mosquitto-specific environment variables
 	return applyMosquittoEnvVars(cfg)
@@ -131,10 +133,10 @@ func applyMosquittoEnvVars(cfg *MosquittoExporterConfig) error {
 		// Parse bind address (format: host:port)
 		host, port := parseBindAddress(bindAddress)
 		if host != "" {
-			cfg.BaseConfig.Server.Host = host
+			cfg.Server.Host = host
 		}
 		if port != 0 {
-			cfg.BaseConfig.Server.Port = port
+			cfg.Server.Port = port
 		}
 	}
 
@@ -149,29 +151,29 @@ func setDefaults(cfg *MosquittoExporterConfig) {
 	}
 
 	// Server defaults (maintain backward compatibility with port 9234)
-	if cfg.BaseConfig.Server.Port == 0 {
-		cfg.BaseConfig.Server.Port = 9234
+	if cfg.Server.Port == 0 {
+		cfg.Server.Port = 9234
 	}
-	if cfg.BaseConfig.Server.Host == "" {
-		cfg.BaseConfig.Server.Host = "0.0.0.0"
+	if cfg.Server.Host == "" {
+		cfg.Server.Host = "0.0.0.0"
 	}
 
 	// Enable web UI and health endpoint by default
-	if cfg.BaseConfig.Server.EnableWebUI == nil {
+	if cfg.Server.EnableWebUI == nil {
 		enabled := true
-		cfg.BaseConfig.Server.EnableWebUI = &enabled
+		cfg.Server.EnableWebUI = &enabled
 	}
-	if cfg.BaseConfig.Server.EnableHealth == nil {
+	if cfg.Server.EnableHealth == nil {
 		enabled := true
-		cfg.BaseConfig.Server.EnableHealth = &enabled
+		cfg.Server.EnableHealth = &enabled
 	}
 
 	// Logging defaults
-	if cfg.BaseConfig.Logging.Level == "" {
-		cfg.BaseConfig.Logging.Level = "info"
+	if cfg.Logging.Level == "" {
+		cfg.Logging.Level = "info"
 	}
-	if cfg.BaseConfig.Logging.Format == "" {
-		cfg.BaseConfig.Logging.Format = "json"
+	if cfg.Logging.Format == "" {
+		cfg.Logging.Format = "json"
 	}
 }
 
