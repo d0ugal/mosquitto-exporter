@@ -35,7 +35,7 @@ func (c *MosquittoCounter) Collect(ch chan<- prometheus.Metric) {
 	ch <- prometheus.MustNewConstMetric(
 		c.Desc,
 		prometheus.CounterValue,
-		c.counter.value,
+		c.value,
 	)
 }
 
