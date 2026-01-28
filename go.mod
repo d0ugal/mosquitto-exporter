@@ -1,11 +1,11 @@
 module github.com/sapcc/mosquitto-exporter
 
-go 1.24.0
+go 1.25
 
-toolchain go1.24.4
+toolchain go1.25.6
 
 require (
-	github.com/d0ugal/promexporter v0.0.0-00010101000000-000000000000
+	github.com/d0ugal/promexporter v1.14.24
 	github.com/eclipse/paho.mqtt.golang v1.5.0
 	github.com/prometheus/client_golang v1.23.2
 )
@@ -73,5 +73,3 @@ require (
 	google.golang.org/protobuf v1.36.11 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace github.com/d0ugal/promexporter => /var/lib/ha/Code/promexporter
