@@ -3,13 +3,10 @@ package main
 import (
 	"fmt"
 	"runtime"
-)
 
-var (
-	Version   = "develop"
-	GITCOMMIT = "HEAD"
+	"github.com/sapcc/mosquitto-exporter/internal/version"
 )
 
 func versionString() string {
-	return fmt.Sprintf("%s (%s), %s", Version, GITCOMMIT, runtime.Version())
+	return fmt.Sprintf("%s (%s), %s", version.Version, version.Commit, runtime.Version())
 }
