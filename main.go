@@ -60,14 +60,14 @@ func main() {
 
 	// Configure logging
 	logging.Configure(&logging.Config{
-		Level:  cfg.BaseConfig.Logging.Level,
-		Format: cfg.BaseConfig.Logging.Format,
+		Level:  cfg.Logging.Level,
+		Format: cfg.Logging.Format,
 	})
 
 	slog.Info("Starting Mosquitto Exporter",
 		"version", versionString(),
 		"broker", cfg.Mosquitto.BrokerEndpoint,
-		"bind_address", fmt.Sprintf("%s:%d", cfg.BaseConfig.Server.Host, cfg.BaseConfig.Server.Port),
+		"bind_address", fmt.Sprintf("%s:%d", cfg.Server.Host, cfg.Server.Port),
 		"config_from_env", configFromEnv,
 	)
 
