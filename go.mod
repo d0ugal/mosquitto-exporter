@@ -5,7 +5,7 @@ go 1.25
 toolchain go1.25.6
 
 require (
-	github.com/d0ugal/promexporter v1.14.25
+	github.com/d0ugal/promexporter v1.14.26
 	github.com/eclipse/paho.mqtt.golang v1.5.0
 	github.com/prometheus/client_golang v1.23.2
 )
