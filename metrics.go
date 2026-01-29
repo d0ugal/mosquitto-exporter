@@ -1,6 +1,7 @@
 package main
 
 import (
+	"strings"
 	"sync"
 
 	"github.com/d0ugal/promexporter/metrics"
@@ -36,20 +37,40 @@ var (
 
 // MosquittoMetrics manages all Prometheus metrics for the Mosquitto exporter
 type MosquittoMetrics struct {
-	registry       *metrics.Registry
-	counterMetrics map[string]*MosquittoCounter
-	gaugeMetrics   map[string]prometheus.Gauge
-	mu             sync.RWMutex
+	registry             *metrics.Registry
+	counterMetrics       map[string]*MosquittoCounter
+	gaugeMetrics         map[string]prometheus.Gauge
+	brokerConnectionUp   prometheus.Gauge
+	lastMessageTimestamp prometheus.Gauge
+	mu                   sync.RWMutex
 }
 
 // NewMosquittoMetrics creates a new metrics registry
 func NewMosquittoMetrics() *MosquittoMetrics {
 	registry := metrics.NewRegistry("mosquitto_exporter_info")
 
+	// Create connection status gauge
+	brokerConnectionUp := prometheus.NewGauge(prometheus.GaugeOpts{
+		Name: "mosquitto_broker_connected",
+		Help: "Connection status to the Mosquitto broker (1 = connected, 0 = disconnected)",
+	})
+	registry.GetRegistry().MustRegister(brokerConnectionUp)
+	registry.AddMetricInfo("mosquitto_broker_connected", "Connection status to the Mosquitto broker (1 = connected, 0 = disconnected)", []string{})
+
+	// Create last message timestamp gauge
+	lastMessageTimestamp := prometheus.NewGauge(prometheus.GaugeOpts{
+		Name: "mosquitto_last_message_timestamp_seconds",
+		Help: "Unix timestamp of the last message received from the broker",
+	})
+	registry.GetRegistry().MustRegister(lastMessageTimestamp)
+	registry.AddMetricInfo("mosquitto_last_message_timestamp_seconds", "Unix timestamp of the last message received from the broker", []string{})
+
 	return &MosquittoMetrics{
-		registry:       registry,
-		counterMetrics: make(map[string]*MosquittoCounter),
-		gaugeMetrics:   make(map[string]prometheus.Gauge),
+		registry:             registry,
+		counterMetrics:       make(map[string]*MosquittoCounter),
+		gaugeMetrics:         make(map[string]prometheus.Gauge),
+		brokerConnectionUp:   brokerConnectionUp,
+		lastMessageTimestamp: lastMessageTimestamp,
 	}
 }
 
@@ -127,7 +148,13 @@ func (mm *MosquittoMetrics) SetCounterValue(topic string, value float64) {
 		help = topic
 	}
 
-	counter := mm.GetOrCreateCounter(topic, help)
+	// Add _total suffix to counter names following Prometheus naming conventions
+	metricName := topic
+	if !strings.HasSuffix(metricName, "_total") {
+		metricName = metricName + "_total"
+	}
+
+	counter := mm.GetOrCreateCounter(metricName, help)
 	counter.Set(value)
 }
 
@@ -135,4 +162,18 @@ func (mm *MosquittoMetrics) SetCounterValue(topic string, value float64) {
 func (mm *MosquittoMetrics) SetGaugeValue(topic string, value float64) {
 	gauge := mm.GetOrCreateGauge(topic, topic)
 	gauge.Set(value)
+}
+
+// SetBrokerConnected sets the broker connection status
+func (mm *MosquittoMetrics) SetBrokerConnected(connected bool) {
+	if connected {
+		mm.brokerConnectionUp.Set(1)
+	} else {
+		mm.brokerConnectionUp.Set(0)
+	}
+}
+
+// UpdateLastMessageTimestamp updates the last message timestamp to current time
+func (mm *MosquittoMetrics) UpdateLastMessageTimestamp() {
+	mm.lastMessageTimestamp.SetToCurrentTime()
 }

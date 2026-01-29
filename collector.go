@@ -42,6 +42,9 @@ func (mc *MosquittoCollector) Start(ctx context.Context) {
 		"tls_enabled", mc.config.Mosquitto.TLS.Enabled,
 	)
 
+	// Set initial connection status to disconnected
+	mc.metrics.SetBrokerConnected(false)
+
 	// Connect to broker in a goroutine
 	go mc.connectToBroker()
 }
@@ -56,6 +59,7 @@ func (mc *MosquittoCollector) Stop() {
 
 	if mc.mqttClient != nil && mc.mqttClient.IsConnected() {
 		mc.mqttClient.Disconnect(250)
+		mc.metrics.SetBrokerConnected(false)
 		slog.Info("Disconnected from MQTT broker")
 	}
 }
@@ -148,6 +152,9 @@ func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
 func (mc *MosquittoCollector) onConnect(client mqtt.Client) {
 	slog.Info("Connected to MQTT broker", "broker", mc.config.Mosquitto.BrokerEndpoint)
 
+	// Update connection status metric
+	mc.metrics.SetBrokerConnected(true)
+
 	// Subscribe to $SYS/# topic
 	token := client.Subscribe("$SYS/#", 0, mc.messageHandler)
 	if !token.WaitTimeout(10 * time.Second) {
@@ -166,6 +173,9 @@ func (mc *MosquittoCollector) onConnect(client mqtt.Client) {
 func (mc *MosquittoCollector) onConnectionLost(client mqtt.Client, err error) {
 	slog.Error("Connection to MQTT broker lost", "error", err, "broker", mc.config.Mosquitto.BrokerEndpoint)
 
+	// Update connection status metric
+	mc.metrics.SetBrokerConnected(false)
+
 	// Reconnection will be handled automatically by the MQTT client library
 	// or by our retry logic if needed
 }
@@ -174,6 +184,9 @@ func (mc *MosquittoCollector) onConnectionLost(client mqtt.Client, err error) {
 func (mc *MosquittoCollector) messageHandler(client mqtt.Client, msg mqtt.Message) {
 	topic := msg.Topic()
 	payload := string(msg.Payload())
+
+	// Update last message timestamp
+	mc.metrics.UpdateLastMessageTimestamp()
 
 	// Check if topic should be ignored
 	if mc.metrics.ShouldIgnoreTopic(topic) {
