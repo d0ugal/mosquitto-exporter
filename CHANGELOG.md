@@ -1,5 +1,34 @@
 # Changelog
 
+## [0.1.1](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.0...v0.1.1) (2026-02-28)
+
+
+### Bug Fixes
+
+* Update dependency go to v1.26.0 ([47a20c5](https://github.com/d0ugal/mosquitto-exporter/commit/47a20c50766f52747f4e6ec355c95881c30a2b42))
+* Update google.golang.org/genproto/googleapis/api digest to 2f722ef ([ecb7103](https://github.com/d0ugal/mosquitto-exporter/commit/ecb71031d9b9ccbed610bb694cc7545c33a3fc57))
+* Update google.golang.org/genproto/googleapis/api digest to 42d3e9b ([30e6209](https://github.com/d0ugal/mosquitto-exporter/commit/30e6209f91b92d4fc9a24d8bc48ed75914c363cd))
+* Update google.golang.org/genproto/googleapis/api digest to 4cfbd41 ([22e73e5](https://github.com/d0ugal/mosquitto-exporter/commit/22e73e57def3f800d8af2514dce6b527e1c6c368))
+* Update google.golang.org/genproto/googleapis/api digest to a2cb227 ([583a10f](https://github.com/d0ugal/mosquitto-exporter/commit/583a10ff4dd0e79aaf38c8aba9cabac005cc4bfa))
+* Update google.golang.org/genproto/googleapis/api digest to a57be14 ([c7e11c3](https://github.com/d0ugal/mosquitto-exporter/commit/c7e11c3c43426897d0fe8c12fdc461bbf9078997))
+* Update google.golang.org/genproto/googleapis/rpc digest to 2f722ef ([92ea12a](https://github.com/d0ugal/mosquitto-exporter/commit/92ea12a37dde3d3f709ac2fef67bdcf09c1bd13a))
+* Update google.golang.org/genproto/googleapis/rpc digest to 42d3e9b ([b1b4fcc](https://github.com/d0ugal/mosquitto-exporter/commit/b1b4fcc222d444741d2c9f906bbe454d8d3603b0))
+* Update google.golang.org/genproto/googleapis/rpc digest to 4cfbd41 ([e5de44d](https://github.com/d0ugal/mosquitto-exporter/commit/e5de44ddbe4fef1d39ee7a84e6a2c886cb19ccf7))
+* Update google.golang.org/genproto/googleapis/rpc digest to a57be14 ([e693b7a](https://github.com/d0ugal/mosquitto-exporter/commit/e693b7a0f3655b81c248256829ff7dad6b7f3fd9))
+* Update module github.com/gin-gonic/gin to v1.12.0 ([1953ba8](https://github.com/d0ugal/mosquitto-exporter/commit/1953ba863d08b423b5eb982b18da40b326b8f202))
+* Update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.27.8 ([2dc1b40](https://github.com/d0ugal/mosquitto-exporter/commit/2dc1b4051c4c9f7de136662c42bcb207e8668359))
+* Update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.28.0 ([acc4e06](https://github.com/d0ugal/mosquitto-exporter/commit/acc4e0679d71893a2ea79f83614a04b6af5e40d2))
+* Update module github.com/klauspost/compress to v1.18.4 ([5b7404c](https://github.com/d0ugal/mosquitto-exporter/commit/5b7404cd00391dedd6c0a8d5b595baba74d11583))
+* Update module github.com/prometheus/procfs to v0.20.0 ([7f16b1c](https://github.com/d0ugal/mosquitto-exporter/commit/7f16b1c67da82d0d92178558d1d59891fade2ff5))
+* Update module github.com/prometheus/procfs to v0.20.1 ([e1747b2](https://github.com/d0ugal/mosquitto-exporter/commit/e1747b2b5a425e71b148a24f5f9339c21c66f975))
+* Update module golang.org/x/arch to v0.24.0 ([ec82b84](https://github.com/d0ugal/mosquitto-exporter/commit/ec82b84aa0910f38305bf704259447bf0ac2eeee))
+* Update module golang.org/x/crypto to v0.48.0 ([8640683](https://github.com/d0ugal/mosquitto-exporter/commit/864068353e6833db1b3ae95fe9c6dfcc78f642d8))
+* Update module golang.org/x/net to v0.50.0 ([a086510](https://github.com/d0ugal/mosquitto-exporter/commit/a086510f1da80c1300d70104ae3111c595f6021e))
+* Update module golang.org/x/net to v0.51.0 ([9d66fa1](https://github.com/d0ugal/mosquitto-exporter/commit/9d66fa153fc8d4d4d85e89915d6e1ee99becd8d3))
+* Update module golang.org/x/sys to v0.41.0 ([34511a2](https://github.com/d0ugal/mosquitto-exporter/commit/34511a2b3b61efcb8861d6643c68836221b3e645))
+* Update module google.golang.org/grpc to v1.79.0 ([5e73d56](https://github.com/d0ugal/mosquitto-exporter/commit/5e73d565ec8b3097fe475b77a7970812f28b2107))
+* Update module google.golang.org/grpc to v1.79.1 ([f3d2f53](https://github.com/d0ugal/mosquitto-exporter/commit/f3d2f533476c35ba3d8b4042a443f95fc85bf9b3))
+
 ## [0.1.0](https://github.com/d0ugal/mosquitto-exporter/compare/v0.0.1...v0.1.0) (2026-02-06)
 
 
