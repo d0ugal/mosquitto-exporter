@@ -144,6 +144,7 @@ See [config.yaml.example](config.yaml.example) for a complete configuration exam
 | `MOSQUITTO_CLIENT_ID` | MQTT client ID | Auto-generated |
 | `MOSQUITTO_TLS_CERT_FILE` | TLS certificate path | - |
 | `MOSQUITTO_TLS_KEY_FILE` | TLS key path | - |
+| `MOSQUITTO_TLS_ENABLED` | Explicitly enable TLS | `false` |
 | `MOSQUITTO_TLS_INSECURE_SKIP_VERIFY` | Skip TLS verification | `false` |
 | `SERVER_HOST` | HTTP server host | `0.0.0.0` |
 | `SERVER_PORT` | HTTP server port | `9234` |
@@ -162,6 +163,7 @@ For backward compatibility, the following legacy environment variables are suppo
 - `MQTT_CLIENT_ID` → `MOSQUITTO_CLIENT_ID`
 - `MQTT_CERT` → `MOSQUITTO_TLS_CERT_FILE`
 - `MQTT_KEY` → `MOSQUITTO_TLS_KEY_FILE`
+- `MQTT_TLS_ENABLED` → `MOSQUITTO_TLS_ENABLED`
 - `BIND_ADDRESS` → Parsed to `SERVER_HOST` and `SERVER_PORT`
 
 ### Command-Line Flags
@@ -211,6 +213,12 @@ broker_uptime 86400
 - **`/`** - Web UI dashboard (if enabled)
 - **`/metrics`** - Prometheus metrics endpoint
 - **`/health`** - Health check endpoint (returns JSON with status)
+
+### TLS Options
+- Client certificates are optional. If `mosquitto.tls.enabled` is true and no
+  client certificate/key are configured, the exporter will still use TLS and
+  perform server-auth TLS only.
+- If one of `cert_file` or `key_file` is set, both must be provided.
 
 ## Building from Source
 
