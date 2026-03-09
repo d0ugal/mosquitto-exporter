@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"crypto/tls"
+	"fmt"
 	"log/slog"
 	"regexp"
 	"strconv"
@@ -121,23 +122,32 @@ func (mc *MosquittoCollector) connectToBroker() {
 
 // configureTLS sets up TLS configuration
 func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
-	if mc.config.Mosquitto.TLS.CertFile == "" || mc.config.Mosquitto.TLS.KeyFile == "" {
-		slog.Warn("TLS enabled but certificate or key file not provided")
-		return nil
-	}
+    certFile := mc.config.Mosquitto.TLS.CertFile
+    keyFile := mc.config.Mosquitto.TLS.KeyFile
 
-	keyPair, err := tls.LoadX509KeyPair(mc.config.Mosquitto.TLS.CertFile, mc.config.Mosquitto.TLS.KeyFile)
-	if err != nil {
-		return err
-	}
-
-	tlsConfig := &tls.Config{
-		Certificates:       []tls.Certificate{keyPair},
+    tlsConfig := &tls.Config{
 		InsecureSkipVerify: mc.config.Mosquitto.TLS.InsecureSkipVerify,
-		ClientAuth:         tls.NoClientCert,
+        ClientAuth:         tls.NoClientCert,
 	}
+
+    switch {
+	case certFile == "" && keyFile == "":
+		slog.Info("TLS enabled without client certificate; using server-auth TLS only")
+	case certFile == "" || keyFile == "":
+		return fmt.Errorf("both mosquitto.tls.cert_file and mosquitto.tls.key_file must be set together")
+	default:
+		keyPair, err := tls.LoadX509KeyPair(certFile, keyFile)
+		if err != nil {
+			return fmt.Errorf("load client TLS key pair: %w", err)
+		}
+		tlsConfig.Certificates = []tls.Certificate{keyPair}
+    }
 
 	opts.SetTLSConfig(tlsConfig)
+
+	if mc.config.Mosquitto.TLS.InsecureSkipVerify {
+		slog.Warn("TLS certificate verification is disabled; this should only be used for testing")
+	}
 
 	// Warn if endpoint doesn't use TLS scheme
 	endpoint := mc.config.Mosquitto.BrokerEndpoint

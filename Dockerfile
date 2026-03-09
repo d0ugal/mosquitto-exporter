@@ -46,7 +46,7 @@ RUN chown appuser:appgroup /app
 USER appuser
 
 # Copy the binary from builder stage
-COPY --from=builder --chown=appuser:appuser /app/mosquitto-exporter .
+COPY --from=builder --chown=appuser:appgroup /app/mosquitto-exporter .
 
 # Expose port
 EXPOSE 9234

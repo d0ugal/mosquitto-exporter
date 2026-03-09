@@ -111,6 +111,13 @@ func applyMosquittoEnvVars(cfg *MosquittoExporterConfig) error {
 		cfg.Mosquitto.ClientID = clientID
 	}
 
+	// Explicit enable TLS - support both new and legacy env var names
+	if tlsEnabled := getEnv("MOSQUITTO_TLS_ENABLED", "MQTT_TLS_ENABLED"); tlsEnabled != "" {
+		if val, err := strconv.ParseBool(tlsEnabled); err == nil {
+			cfg.Mosquitto.TLS.Enabled = val
+		}
+	}
+
 	// TLS settings - support both new and legacy env var names
 	if certFile := getEnv("MOSQUITTO_TLS_CERT_FILE", "MQTT_CERT"); certFile != "" {
 		cfg.Mosquitto.TLS.CertFile = certFile
@@ -125,6 +132,7 @@ func applyMosquittoEnvVars(cfg *MosquittoExporterConfig) error {
 	if skipVerify := os.Getenv("MOSQUITTO_TLS_INSECURE_SKIP_VERIFY"); skipVerify != "" {
 		if val, err := strconv.ParseBool(skipVerify); err == nil {
 			cfg.Mosquitto.TLS.InsecureSkipVerify = val
+			cfg.Mosquitto.TLS.Enabled = true
 		}
 	}
 
