@@ -122,15 +122,15 @@ func (mc *MosquittoCollector) connectToBroker() {
 
 // configureTLS sets up TLS configuration
 func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
-    certFile := mc.config.Mosquitto.TLS.CertFile
-    keyFile := mc.config.Mosquitto.TLS.KeyFile
+	certFile := mc.config.Mosquitto.TLS.CertFile
+	keyFile := mc.config.Mosquitto.TLS.KeyFile
 
-    tlsConfig := &tls.Config{
+	tlsConfig := &tls.Config{
 		InsecureSkipVerify: mc.config.Mosquitto.TLS.InsecureSkipVerify,
-        ClientAuth:         tls.NoClientCert,
+		ClientAuth:         tls.NoClientCert,
 	}
 
-    switch {
+	switch {
 	case certFile == "" && keyFile == "":
 		slog.Info("TLS enabled without client certificate; using server-auth TLS only")
 	case certFile == "" || keyFile == "":
@@ -141,7 +141,7 @@ func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
 			return fmt.Errorf("load client TLS key pair: %w", err)
 		}
 		tlsConfig.Certificates = []tls.Certificate{keyPair}
-    }
+	}
 
 	opts.SetTLSConfig(tlsConfig)
 
