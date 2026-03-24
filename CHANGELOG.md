@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.1...v0.1.2) (2026-03-24)
+
+
+### Bug Fixes
+
+* Update module github.com/pelletier/go-toml/v2 to v2.3.0 ([df27f13](https://github.com/d0ugal/mosquitto-exporter/commit/df27f132d0c2f0fc6bd230ad820e4c32622a6f19))
+
 ## [0.1.1](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.0...v0.1.1) (2026-03-23)
 
 
