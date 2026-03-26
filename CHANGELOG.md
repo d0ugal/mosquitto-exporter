@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.3...v0.1.4) (2026-03-26)
+
+
+### Bug Fixes
+
+* Update module github.com/grafana/pyroscope-go to v1.2.8 ([3fc9c41](https://github.com/d0ugal/mosquitto-exporter/commit/3fc9c413ef47e4f6b89540accd8ed9ed4ee41ad7))
+
 ## [0.1.3](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.2...v0.1.3) (2026-03-25)
 
 
