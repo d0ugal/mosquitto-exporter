@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.5](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.4...v0.1.5) (2026-03-28)
+
+
+### Bug Fixes
+
+* Update module github.com/bytedance/sonic/loader to v0.5.1 ([aa6b25b](https://github.com/d0ugal/mosquitto-exporter/commit/aa6b25bc0a61d968c56855caf87ec30e504df472))
+* Update module github.com/d0ugal/promexporter to v1.14.29 ([a0d8b46](https://github.com/d0ugal/mosquitto-exporter/commit/a0d8b46bbd4b8c3855fd003ee8a56c4db29dbfa2))
+* Update module github.com/gin-contrib/sse to v1.1.1 ([2b0fc27](https://github.com/d0ugal/mosquitto-exporter/commit/2b0fc27af61439539ab1dbc1b7325c99508c4cc6))
+
 ## [0.1.4](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.3...v0.1.4) (2026-03-26)
 
 
