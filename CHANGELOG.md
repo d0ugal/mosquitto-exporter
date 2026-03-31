@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.7](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.6...v0.1.7) (2026-03-31)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to d5a96ad ([50e8218](https://github.com/d0ugal/mosquitto-exporter/commit/50e8218a0e9b918b123e6eb91696856d2b1abd0b))
+* Update google.golang.org/genproto/googleapis/rpc digest to b2ae96c ([543cad0](https://github.com/d0ugal/mosquitto-exporter/commit/543cad006ec848596179ba6c2906bee800a86e3d))
+* Update google.golang.org/genproto/googleapis/rpc digest to d5a96ad ([f7e67df](https://github.com/d0ugal/mosquitto-exporter/commit/f7e67dfe9af2c715ccb096dbcc6a15d8fd6d57cd))
+* Update module github.com/go-playground/validator/v10 to v10.30.2 ([2791dd1](https://github.com/d0ugal/mosquitto-exporter/commit/2791dd129995257f526dfbc2a9b00982168c1600))
+
 ## [0.1.6](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.5...v0.1.6) (2026-03-30)
 
 
