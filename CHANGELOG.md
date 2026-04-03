@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.11](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.10...v0.1.11) (2026-04-03)
+
+
+### Bug Fixes
+
+* Update opentelemetry-go monorepo to v1.43.0 ([95fa7f2](https://github.com/d0ugal/mosquitto-exporter/commit/95fa7f201cb857e5b32ea4d56a7f8c377f94006b))
+
 ## [0.1.10](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.9...v0.1.10) (2026-04-01)
 
 
