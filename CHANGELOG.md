@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.14](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.13...v0.1.14) (2026-04-07)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.34 ([83f5953](https://github.com/d0ugal/mosquitto-exporter/commit/83f595364ad2ad40ce071b161fe9b5677d2a67c0))
+* Update module go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin to v0.68.0 ([53a70ac](https://github.com/d0ugal/mosquitto-exporter/commit/53a70ac72d56d641eba5f73acc18c2d20abd52a9))
+* Update module go.opentelemetry.io/contrib/instrumentation/runtime to v0.68.0 ([9184168](https://github.com/d0ugal/mosquitto-exporter/commit/9184168d2d6a1b511a9186491a4564b6738d2e6d))
+
 ## [0.1.13](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.12...v0.1.13) (2026-04-07)
 
 
