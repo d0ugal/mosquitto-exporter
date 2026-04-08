@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.17](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.16...v0.1.17) (2026-04-08)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.36 ([54740e8](https://github.com/d0ugal/mosquitto-exporter/commit/54740e82db7fd28be243302d361c72294a670d5f))
+* Update module github.com/mattn/go-isatty to v0.0.21 ([00d9ff6](https://github.com/d0ugal/mosquitto-exporter/commit/00d9ff6074752eb3be1bcfaae42f95b5d32a2bf5))
+* Update module golang.org/x/sys to v0.43.0 ([7cf796b](https://github.com/d0ugal/mosquitto-exporter/commit/7cf796b49154f764b7d8f4e23ad0ef5be12686a4))
+
 ## [0.1.16](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.15...v0.1.16) (2026-04-08)
 
 
