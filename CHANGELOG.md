@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.16](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.15...v0.1.16) (2026-04-08)
+
+
+### Bug Fixes
+
+* Update dependency go to v1.26.2 ([44515f0](https://github.com/d0ugal/mosquitto-exporter/commit/44515f0d79eb73515d42e19e2e185f56ae6e1870))
+
 ## [0.1.15](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.14...v0.1.15) (2026-04-07)
 
 
