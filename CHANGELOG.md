@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.19](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.18...v0.1.19) (2026-04-09)
+
+
+### Bug Fixes
+
+* Update module golang.org/x/crypto to v0.50.0 ([f755ecd](https://github.com/d0ugal/mosquitto-exporter/commit/f755ecdc669e430808954fdd40b71c037b14e563))
+
 ## [0.1.18](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.17...v0.1.18) (2026-04-09)
 
 
