@@ -198,6 +198,12 @@ func (mc *MosquittoCollector) messageHandler(client mqtt.Client, msg mqtt.Messag
 	// Update last message timestamp
 	mc.metrics.UpdateLastMessageTimestamp()
 
+	// Handle broker version as an info metric with a version label
+	if topic == "$SYS/broker/version" {
+		mc.metrics.SetBrokerVersion(payload)
+		return
+	}
+
 	// Check if topic should be ignored
 	if mc.metrics.ShouldIgnoreTopic(topic) {
 		return
