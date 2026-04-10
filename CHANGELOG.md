@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.0...v0.2.1) (2026-04-10)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.39 ([88b9f18](https://github.com/d0ugal/mosquitto-exporter/commit/88b9f18296ef84ab5038c683bb7d8ab917e07a4f))
+* Update module golang.org/x/arch to v0.26.0 ([fe07f9a](https://github.com/d0ugal/mosquitto-exporter/commit/fe07f9a3535829492362cdb30c37acbf6fdd107c))
+
 ## [0.2.0](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.19...v0.2.0) (2026-04-10)
 
 
