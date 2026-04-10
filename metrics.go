@@ -13,7 +13,6 @@ var (
 	// ignoreKeyMetrics lists topics that should be ignored
 	ignoreKeyMetrics = map[string]string{
 		"$SYS/broker/timestamp":        "The timestamp at which this particular build of the broker was made. Static.",
-		"$SYS/broker/version":          "The version of the broker. Static.",
 		"$SYS/broker/clients/active":   "deprecated in favour of $SYS/broker/clients/connected",
 		"$SYS/broker/clients/inactive": "deprecated in favour of $SYS/broker/clients/disconnected",
 	}
@@ -42,6 +41,7 @@ type MosquittoMetrics struct {
 	gaugeMetrics         map[string]prometheus.Gauge
 	brokerConnectionUp   prometheus.Gauge
 	lastMessageTimestamp prometheus.Gauge
+	brokerInfo           *prometheus.GaugeVec
 	mu                   sync.RWMutex
 }
 
@@ -65,12 +65,21 @@ func NewMosquittoMetrics() *MosquittoMetrics {
 	registry.GetRegistry().MustRegister(lastMessageTimestamp)
 	registry.AddMetricInfo("mosquitto_last_message_timestamp_seconds", "Unix timestamp of the last message received from the broker", []string{})
 
+	// Create broker info gauge (value always 1; version is a label)
+	brokerInfo := prometheus.NewGaugeVec(prometheus.GaugeOpts{
+		Name: "mosquitto_broker_info",
+		Help: "Static info about the Mosquitto broker (value is always 1)",
+	}, []string{"version"})
+	registry.GetRegistry().MustRegister(brokerInfo)
+	registry.AddMetricInfo("mosquitto_broker_info", "Static info about the Mosquitto broker (value is always 1)", []string{"version"})
+
 	return &MosquittoMetrics{
 		registry:             registry,
 		counterMetrics:       make(map[string]*MosquittoCounter),
 		gaugeMetrics:         make(map[string]prometheus.Gauge),
 		brokerConnectionUp:   brokerConnectionUp,
 		lastMessageTimestamp: lastMessageTimestamp,
+		brokerInfo:           brokerInfo,
 	}
 }
 
@@ -176,4 +185,11 @@ func (mm *MosquittoMetrics) SetBrokerConnected(connected bool) {
 // UpdateLastMessageTimestamp updates the last message timestamp to current time
 func (mm *MosquittoMetrics) UpdateLastMessageTimestamp() {
 	mm.lastMessageTimestamp.SetToCurrentTime()
+}
+
+// SetBrokerVersion records the broker version in the info metric.
+// Any previously set version label is deleted so the metric always has exactly one series.
+func (mm *MosquittoMetrics) SetBrokerVersion(version string) {
+	mm.brokerInfo.Reset()
+	mm.brokerInfo.With(prometheus.Labels{"version": version}).Set(1)
 }
