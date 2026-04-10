@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.0](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.19...v0.2.0) (2026-04-10)
+
+
+### Features
+
+* expose broker version as mosquitto_broker_info metric ([8b17bd7](https://github.com/d0ugal/mosquitto-exporter/commit/8b17bd761f9e0283dffb818ff8010a89a7f1e534))
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.38 ([0bd3926](https://github.com/d0ugal/mosquitto-exporter/commit/0bd392602a74afb5a9cdb43a9ac89afa528a4f54))
+* Update module golang.org/x/net to v0.53.0 ([9654123](https://github.com/d0ugal/mosquitto-exporter/commit/9654123e79aac944ea1f25f9c45813e88cb24bfe))
+
 ## [0.1.19](https://github.com/d0ugal/mosquitto-exporter/compare/v0.1.18...v0.1.19) (2026-04-09)
 
 
