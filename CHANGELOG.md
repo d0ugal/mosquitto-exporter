@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.3](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.2...v0.2.3) (2026-04-17)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 85fdc51 ([71f37ca](https://github.com/d0ugal/mosquitto-exporter/commit/71f37cac9c606dae19bebe80bfe3e1f428597d9b))
+* Update google.golang.org/genproto/googleapis/api digest to afd174a ([dd11847](https://github.com/d0ugal/mosquitto-exporter/commit/dd118472276b580d3d26d820ea249a84ccb50b17))
+* Update google.golang.org/genproto/googleapis/rpc digest to afd174a ([5e0ae26](https://github.com/d0ugal/mosquitto-exporter/commit/5e0ae26b0dd6a8e04284b3092039b7d479ab5d43))
+* Update module github.com/d0ugal/promexporter to v1.14.41 ([8722092](https://github.com/d0ugal/mosquitto-exporter/commit/8722092266b94a8359fd237d86a377eb495f08d6))
+* Update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.29.0 ([64f95f9](https://github.com/d0ugal/mosquitto-exporter/commit/64f95f9a04cd4d4242b8fdae7c504b28109cedc8))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.5.1 ([8e5e04c](https://github.com/d0ugal/mosquitto-exporter/commit/8e5e04c0fc89cc6a9408f44ccade0877871eb31f))
+
 ## [0.2.2](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.1...v0.2.2) (2026-04-11)
 
 
