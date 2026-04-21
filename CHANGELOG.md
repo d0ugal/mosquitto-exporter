@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.6](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.5...v0.2.6) (2026-04-21)
+
+
+### Bug Fixes
+
+* remove trailing blank line in commits.yml ([4e1a84d](https://github.com/d0ugal/mosquitto-exporter/commit/4e1a84d83362e2bb66d888d06f224348f3bb4547))
+
 ## [0.2.5](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.4...v0.2.5) (2026-04-21)
 
 
