@@ -17,14 +17,16 @@ const (
 func main() {
 	// Parse command-line flags
 	var (
-		showVersion bool
-		configPath  string
-		showConfig  bool
+		showVersion   bool
+		configPath    string
+		configFromEnv bool
+		showConfig    bool
 	)
 
 	flag.BoolVar(&showVersion, "version", false, "Show version information")
 	flag.BoolVar(&showVersion, "v", false, "Show version information (shorthand)")
 	flag.StringVar(&configPath, "config", "config.yaml", "Path to configuration file")
+	flag.BoolVar(&configFromEnv, "config-from-env", false, "Deprecated: env vars are always applied; this flag is a no-op")
 	flag.BoolVar(&showConfig, "show-config", false, "Show loaded configuration and exit")
 	flag.Parse()
 
@@ -32,6 +34,10 @@ func main() {
 	if showVersion {
 		fmt.Printf("%s %s\n", appName, versionString())
 		os.Exit(0)
+	}
+
+	if configFromEnv || os.Getenv("CONFIG_FROM_ENV") == "true" {
+		fmt.Fprintln(os.Stderr, "Warning: --config-from-env / CONFIG_FROM_ENV is deprecated and has no effect. Env vars are always applied on top of yaml config.")
 	}
 
 	// Load configuration (yaml optional; env vars always override)
