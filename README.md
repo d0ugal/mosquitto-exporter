@@ -65,6 +65,7 @@ services:
     ports:
       - "9234:9234"
     environment:
+      CONFIG_FROM_ENV: "true"
       MOSQUITTO_BROKER_ENDPOINT: tcp://mosquitto:1883
       MOSQUITTO_USERNAME: ""
       MOSQUITTO_PASSWORD: ""
