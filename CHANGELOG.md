@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.8](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.7...v0.2.8) (2026-04-26)
+
+
+### Bug Fixes
+
+* add CONFIG_FROM_ENV to Docker Compose example ([3653277](https://github.com/d0ugal/mosquitto-exporter/commit/3653277ca38989e933aa897e046c0cbd5954710e))
+* deprecate --config-from-env flag with a runtime warning ([1919e6b](https://github.com/d0ugal/mosquitto-exporter/commit/1919e6b4f2afaf7382557732823ea078cc9e61c0))
+* make yaml optional and always overlay env vars on config ([d612fb2](https://github.com/d0ugal/mosquitto-exporter/commit/d612fb2b9f6d0aa1cdfbadbe39fac132c8bb6912))
+
 ## [0.2.7](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.6...v0.2.7) (2026-04-21)
 
 
