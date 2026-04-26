@@ -50,9 +50,8 @@ This project respects the original Apache 2.0 license and builds upon their exce
 
 ```bash
 docker run -p 9234:9234 \
-  ghcr.io/d0ugal/mosquitto-exporter:latest \
-  --config-from-env \
-  -e MOSQUITTO_BROKER_ENDPOINT=tcp://mosquitto:1883
+  -e MOSQUITTO_BROKER_ENDPOINT=tcp://mosquitto:1883 \
+  ghcr.io/d0ugal/mosquitto-exporter:latest
 ```
 
 ### Docker Compose
@@ -65,7 +64,6 @@ services:
     ports:
       - "9234:9234"
     environment:
-      CONFIG_FROM_ENV: "true"
       MOSQUITTO_BROKER_ENDPOINT: tcp://mosquitto:1883
       MOSQUITTO_USERNAME: ""
       MOSQUITTO_PASSWORD: ""
@@ -80,8 +78,8 @@ services:
 # Download latest release
 wget https://github.com/d0ugal/mosquitto-exporter/releases/latest/download/mosquitto-exporter
 
-# Run with environment variables
-MOSQUITTO_BROKER_ENDPOINT=tcp://localhost:1883 ./mosquitto-exporter --config-from-env
+# Run with environment variables (yaml optional; env vars always override)
+MOSQUITTO_BROKER_ENDPOINT=tcp://localhost:1883 ./mosquitto-exporter
 
 # Or with config file
 ./mosquitto-exporter --config config.yaml
@@ -174,7 +172,6 @@ mosquitto-exporter [OPTIONS]
 
 Options:
   --config PATH              Path to YAML configuration file (default: config.yaml)
-  --config-from-env          Load configuration entirely from environment variables
   --show-config              Display loaded configuration and exit
   --version, -v              Show version information
   --help, -h                 Show help message
@@ -397,10 +394,10 @@ If the exporter can't connect to Mosquitto:
 
 ```bash
 # Text format logs (human-readable)
-LOG_FORMAT=text ./mosquitto-exporter --config-from-env
+LOG_FORMAT=text ./mosquitto-exporter
 
 # Debug level logs
-LOG_LEVEL=debug ./mosquitto-exporter --config-from-env
+LOG_LEVEL=debug ./mosquitto-exporter
 ```
 
 ### No Metrics Appearing
