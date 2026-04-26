@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.9](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.8...v0.2.9) (2026-04-26)
+
+
+### Bug Fixes
+
+* use RELEASE_TOKEN in auto-format workflow to trigger CI ([9752edc](https://github.com/d0ugal/mosquitto-exporter/commit/9752edcc75af700714183a8176b50d218406a957))
+
 ## [0.2.8](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.7...v0.2.8) (2026-04-26)
 
 
