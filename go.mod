@@ -8,6 +8,7 @@ require (
 	github.com/d0ugal/promexporter v1.14.43
 	github.com/eclipse/paho.mqtt.golang v1.5.1
 	github.com/prometheus/client_golang v1.23.2
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (

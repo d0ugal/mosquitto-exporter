@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/d0ugal/promexporter/config"
+	"gopkg.in/yaml.v3"
 )
 
 // MosquittoExporterConfig extends the base configuration with Mosquitto-specific settings
@@ -46,47 +47,33 @@ func (c *MosquittoExporterConfig) GetDisplayConfig() map[string]interface{} {
 	return cfg
 }
 
-// LoadConfig loads configuration from YAML file or environment variables
-func LoadConfig(configPath string, configFromEnv bool) (*MosquittoExporterConfig, error) {
+// LoadConfig loads configuration from an optional YAML file, then overlays environment variables.
+func LoadConfig(configPath string) (*MosquittoExporterConfig, error) {
 	var cfg MosquittoExporterConfig
 
-	if configFromEnv {
-		// Load from environment variables
-		if err := loadFromEnv(&cfg); err != nil {
-			return nil, fmt.Errorf("failed to load config from environment: %w", err)
-		}
-	} else {
-		// Load from YAML file
-		baseConfig, err := config.Load(configPath)
-		if err != nil {
-			return nil, fmt.Errorf("failed to load config from file: %w", err)
-		}
-		cfg.BaseConfig = *baseConfig
-
-		// Apply Mosquitto-specific environment variable overrides
-		if err := applyMosquittoEnvVars(&cfg); err != nil {
-			return nil, fmt.Errorf("failed to apply environment overrides: %w", err)
+	// Try to load from YAML (optional — silently skip if file not found)
+	if configPath != "" {
+		data, err := os.ReadFile(configPath)
+		if err == nil {
+			if err := yaml.Unmarshal(data, &cfg); err != nil {
+				return nil, fmt.Errorf("failed to parse config file %s: %w", configPath, err)
+			}
+		} else if !os.IsNotExist(err) {
+			return nil, fmt.Errorf("failed to read config file %s: %w", configPath, err)
 		}
 	}
 
-	// Set defaults if not configured
+	// Always apply environment variable overrides
+	if err := config.ApplyGenericEnvVars(&cfg.BaseConfig); err != nil {
+		return nil, fmt.Errorf("failed to apply generic environment variables: %w", err)
+	}
+	if err := applyMosquittoEnvVars(&cfg); err != nil {
+		return nil, fmt.Errorf("failed to apply environment overrides: %w", err)
+	}
+
 	setDefaults(&cfg)
 
 	return &cfg, nil
-}
-
-// loadFromEnv loads configuration entirely from environment variables
-func loadFromEnv(cfg *MosquittoExporterConfig) error {
-	// Create a base config with defaults
-	cfg.BaseConfig = config.BaseConfig{}
-
-	// Apply generic environment variables
-	if err := config.ApplyGenericEnvVars(&cfg.BaseConfig); err != nil {
-		return fmt.Errorf("failed to apply generic environment variables: %w", err)
-	}
-
-	// Apply Mosquitto-specific environment variables
-	return applyMosquittoEnvVars(cfg)
 }
 
 // applyMosquittoEnvVars applies Mosquitto-specific environment variables
