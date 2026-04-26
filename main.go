@@ -17,16 +17,14 @@ const (
 func main() {
 	// Parse command-line flags
 	var (
-		showVersion   bool
-		configPath    string
-		configFromEnv bool
-		showConfig    bool
+		showVersion bool
+		configPath  string
+		showConfig  bool
 	)
 
 	flag.BoolVar(&showVersion, "version", false, "Show version information")
 	flag.BoolVar(&showVersion, "v", false, "Show version information (shorthand)")
 	flag.StringVar(&configPath, "config", "config.yaml", "Path to configuration file")
-	flag.BoolVar(&configFromEnv, "config-from-env", false, "Load configuration from environment variables only")
 	flag.BoolVar(&showConfig, "show-config", false, "Show loaded configuration and exit")
 	flag.Parse()
 
@@ -36,13 +34,8 @@ func main() {
 		os.Exit(0)
 	}
 
-	// Check for CONFIG_FROM_ENV environment variable
-	if os.Getenv("CONFIG_FROM_ENV") == "true" {
-		configFromEnv = true
-	}
-
-	// Load configuration
-	cfg, err := LoadConfig(configPath, configFromEnv)
+	// Load configuration (yaml optional; env vars always override)
+	cfg, err := LoadConfig(configPath)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to load configuration: %v\n", err)
 		os.Exit(1)
@@ -68,7 +61,6 @@ func main() {
 		"version", versionString(),
 		"broker", cfg.Mosquitto.BrokerEndpoint,
 		"bind_address", fmt.Sprintf("%s:%d", cfg.Server.Host, cfg.Server.Port),
-		"config_from_env", configFromEnv,
 	)
 
 	// Initialize metrics registry
