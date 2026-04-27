@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.11](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.10...v0.2.11) (2026-04-27)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 7cedc36 ([79c0360](https://github.com/d0ugal/mosquitto-exporter/commit/79c0360696f32a26eefcb67218b53f967620f95d))
+* Update google.golang.org/genproto/googleapis/rpc digest to 7cedc36 ([1eb1900](https://github.com/d0ugal/mosquitto-exporter/commit/1eb1900fd742db2237796134c437d4384e19b605))
+* Update module github.com/bytedance/sonic to v1.15.1 ([db39550](https://github.com/d0ugal/mosquitto-exporter/commit/db395507aace1addb544dde9148fac98d171bce2))
+* Update module github.com/d0ugal/promexporter to v1.14.44 ([47da0bc](https://github.com/d0ugal/mosquitto-exporter/commit/47da0bcabef8a2b70fcdbd7ccb64c802e88a7c46))
+* Update module github.com/d0ugal/promexporter to v1.14.45 ([23b2c9e](https://github.com/d0ugal/mosquitto-exporter/commit/23b2c9e8fe1d790d3782c042081c0a962f5b56bb))
+
 ## [0.2.10](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.9...v0.2.10) (2026-04-27)
 
 
