@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.12](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.11...v0.2.12) (2026-04-30)
+
+
+### Bug Fixes
+
+* Update module github.com/cloudwego/base64x to v0.1.7 ([16b670d](https://github.com/d0ugal/mosquitto-exporter/commit/16b670d848477fde6f711e63305fc2753ffef634))
+* Update module github.com/d0ugal/promexporter to v1.14.46 ([1a4ba10](https://github.com/d0ugal/mosquitto-exporter/commit/1a4ba104918f3e44e5f84e3d3e89f3b479e47a1a))
+* Update module github.com/klauspost/compress to v1.18.6 ([5d93787](https://github.com/d0ugal/mosquitto-exporter/commit/5d937875e166bab8d9c06e5c1d28de57e2d55321))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.6.0 ([c27725b](https://github.com/d0ugal/mosquitto-exporter/commit/c27725b343e0fb90289fb1f5ee087c2f1659b132))
+
 ## [0.2.11](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.10...v0.2.11) (2026-04-27)
 
 
