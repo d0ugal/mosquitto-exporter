@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.13](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.12...v0.2.13) (2026-05-01)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.47 ([2442a01](https://github.com/d0ugal/mosquitto-exporter/commit/2442a01756a6609eb2f253152de045a8f7331a8f))
+* Update module github.com/pelletier/go-toml/v2 to v2.3.1 ([a1b76d2](https://github.com/d0ugal/mosquitto-exporter/commit/a1b76d2eb7480953262c457b3f78ce3a8bf656ab))
+
 ## [0.2.12](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.11...v0.2.12) (2026-04-30)
 
 
