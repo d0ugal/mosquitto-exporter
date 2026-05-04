@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.17](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.16...v0.2.17) (2026-05-04)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 60b97b3 ([eb0e1e1](https://github.com/d0ugal/mosquitto-exporter/commit/eb0e1e165a328ac155217147d96481f5c5e5500b))
+
 ## [0.2.16](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.15...v0.2.16) (2026-05-04)
 
 
