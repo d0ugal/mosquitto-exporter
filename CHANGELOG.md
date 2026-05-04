@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.16](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.15...v0.2.16) (2026-05-04)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/rpc digest to 60b97b3 ([23acd0d](https://github.com/d0ugal/mosquitto-exporter/commit/23acd0d490a0ba42891bf95abbb7f6fbd8695201))
+
 ## [0.2.15](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.14...v0.2.15) (2026-05-04)
 
 
