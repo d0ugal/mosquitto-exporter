@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.15](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.14...v0.2.15) (2026-05-04)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.49 ([b93c275](https://github.com/d0ugal/mosquitto-exporter/commit/b93c27533b48bfe6d6d666e9dd40e4886651b12b))
+* Update module google.golang.org/grpc to v1.81.0 ([1e2e2d9](https://github.com/d0ugal/mosquitto-exporter/commit/1e2e2d950c555cec17fc3b53cb654ea53cf84830))
+
 ## [0.2.14](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.13...v0.2.14) (2026-05-02)
 
 
