@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.18](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.17...v0.2.18) (2026-05-06)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.50 ([f1f82c1](https://github.com/d0ugal/mosquitto-exporter/commit/f1f82c1ae9ebbd4217d77f93419e362e53c9383a))
+* Update module github.com/grafana/pyroscope-go to v1.3.0 ([f41651f](https://github.com/d0ugal/mosquitto-exporter/commit/f41651fd0da08e9757630d7e7cd1a56fd2d13bb4))
+* Update module github.com/grafana/pyroscope-go/godeltaprof to v0.1.10 ([cccda10](https://github.com/d0ugal/mosquitto-exporter/commit/cccda1050f752ecb05a0f3d0fb74313a823754a8))
+
 ## [0.2.17](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.16...v0.2.17) (2026-05-04)
 
 
