@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.20](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.19...v0.2.20) (2026-05-11)
+
+
+### Bug Fixes
+
+* Update go toolchain directive to v1.26.3 ([fb4d706](https://github.com/d0ugal/mosquitto-exporter/commit/fb4d706f4d9d494ff6b9ed2b9ddeca29547182eb))
+* Update module github.com/d0ugal/promexporter to v1.14.53 ([45b5987](https://github.com/d0ugal/mosquitto-exporter/commit/45b598741250475a41c9a10198fc76ee27a1c6a3))
+* Update module github.com/quic-go/quic-go to v0.59.1 ([3f62d31](https://github.com/d0ugal/mosquitto-exporter/commit/3f62d31aa40425ab7aceab087192cb921857ae55))
+* Update module golang.org/x/arch to v0.27.0 ([158bc7a](https://github.com/d0ugal/mosquitto-exporter/commit/158bc7a4111c4aa7ad18bc104a11d8d528bb67a8))
+* Update module golang.org/x/crypto to v0.51.0 ([04d2bcc](https://github.com/d0ugal/mosquitto-exporter/commit/04d2bcc162f2969d01dff339c9503dc054d2e5c7))
+* Update module golang.org/x/net to v0.54.0 ([179b119](https://github.com/d0ugal/mosquitto-exporter/commit/179b119a5118728514dc5e05ebdfdd0b30b29143))
+* Update module golang.org/x/sys to v0.44.0 ([3b55afb](https://github.com/d0ugal/mosquitto-exporter/commit/3b55afbe92eceb299c0de1718fb5ce776eec9e32))
+* Update module golang.org/x/text to v0.37.0 ([3c0af8a](https://github.com/d0ugal/mosquitto-exporter/commit/3c0af8a1cfb573409b8e3d9c6cb77a26bb58da33))
+
 ## [0.2.19](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.18...v0.2.19) (2026-05-07)
 
 
