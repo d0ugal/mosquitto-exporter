@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.22](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.21...v0.2.22) (2026-05-12)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.55 ([3537d7a](https://github.com/d0ugal/mosquitto-exporter/commit/3537d7a0a0a9e79c28cc63871669eed1ad32c87f))
+
 ## [0.2.21](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.20...v0.2.21) (2026-05-11)
 
 
