@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.23](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.22...v0.2.23) (2026-05-14)
+
+
+### Bug Fixes
+
+* Update module google.golang.org/grpc to v1.81.1 ([de5cad7](https://github.com/d0ugal/mosquitto-exporter/commit/de5cad74c9612df45b84aba80873d71b05549561))
+
 ## [0.2.22](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.21...v0.2.22) (2026-05-12)
 
 
