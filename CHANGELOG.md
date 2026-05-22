@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.26](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.25...v0.2.26) (2026-05-22)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 9641223 ([2f6840e](https://github.com/d0ugal/mosquitto-exporter/commit/2f6840e7f124543b59f63237cefcdc7e05cdbb31))
+* Update module github.com/d0ugal/promexporter to v1.14.58 ([c27935d](https://github.com/d0ugal/mosquitto-exporter/commit/c27935dbf5632381fa067ac1704ae6ab5008d60e))
+
 ## [0.2.25](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.24...v0.2.25) (2026-05-22)
 
 
