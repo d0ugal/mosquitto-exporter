@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.25](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.24...v0.2.25) (2026-05-22)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.57 ([e475bf3](https://github.com/d0ugal/mosquitto-exporter/commit/e475bf3b87209052c7b274ae2f404480e73d8a5b))
+* Update module golang.org/x/crypto to v0.52.0 ([b8946d4](https://github.com/d0ugal/mosquitto-exporter/commit/b8946d4da0bcbffb200980208500c69a07034a20))
+* Update module golang.org/x/net to v0.55.0 ([9a81adf](https://github.com/d0ugal/mosquitto-exporter/commit/9a81adf67e61cb25a7743f6d50ee9c7e32e4e385))
+* Update module golang.org/x/sys to v0.45.0 ([ba92b7e](https://github.com/d0ugal/mosquitto-exporter/commit/ba92b7e6692f38d16ed9e6e28d10f59fd82e6acf))
+
 ## [0.2.24](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.23...v0.2.24) (2026-05-19)
 
 
