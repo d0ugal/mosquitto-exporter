@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.28](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.27...v0.2.28) (2026-05-28)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.60 ([cb0eba4](https://github.com/d0ugal/mosquitto-exporter/commit/cb0eba476b3e350a3f24c0e4ca0a4b95e5de8cf9))
+* Update module github.com/grafana/pyroscope-go to v1.3.1 ([8c54ef4](https://github.com/d0ugal/mosquitto-exporter/commit/8c54ef49137dca0f065160fcc5fd674f995aaeaa))
+* Update module github.com/grafana/pyroscope-go/godeltaprof to v0.1.11 ([04c38e6](https://github.com/d0ugal/mosquitto-exporter/commit/04c38e6e4b22e6c43cabc63008c29ca6a48fb866))
+* Update opentelemetry-go monorepo to v1.44.0 ([aa00583](https://github.com/d0ugal/mosquitto-exporter/commit/aa0058306dd2171a2a77c5ff079040f7a4069ace))
+* Update opentelemetry-go-contrib monorepo to v0.69.0 ([d5ff8cc](https://github.com/d0ugal/mosquitto-exporter/commit/d5ff8cc0eb352a47261a94056378867141e2937c))
+
 ## [0.2.27](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.26...v0.2.27) (2026-05-26)
 
 
