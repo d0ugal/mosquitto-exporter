@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.30](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.29...v0.2.30) (2026-06-03)
+
+
+### Bug Fixes
+
+* Update go toolchain directive to v1.26.4 ([2d7db0b](https://github.com/d0ugal/mosquitto-exporter/commit/2d7db0b89df6d9375deac25e332df9ce1f675a85))
+* Update module github.com/d0ugal/promexporter to v1.14.62 ([c59269c](https://github.com/d0ugal/mosquitto-exporter/commit/c59269c1da8a6760c0895e01f02288c3c6dde1f4))
+* Update module github.com/go-playground/validator/v10 to v10.30.3 ([064546a](https://github.com/d0ugal/mosquitto-exporter/commit/064546a2fa0940e5e7fb30329b4a3255bf4c8df1))
+* Update module github.com/prometheus/common to v0.68.1 ([3072022](https://github.com/d0ugal/mosquitto-exporter/commit/3072022062c3723603a274d350d18acfe13f8f11))
+
 ## [0.2.29](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.28...v0.2.29) (2026-05-29)
 
 
