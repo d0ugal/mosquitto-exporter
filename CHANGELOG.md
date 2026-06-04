@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.32](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.31...v0.2.32) (2026-06-04)
+
+
+### Bug Fixes
+
+* Update module github.com/bytedance/sonic to v1.15.2 ([3ee5ffc](https://github.com/d0ugal/mosquitto-exporter/commit/3ee5ffce1b4f990b44a3602195c0f9cd8fb9fe39))
+
 ## [0.2.31](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.30...v0.2.31) (2026-06-03)
 
 
