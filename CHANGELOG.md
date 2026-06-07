@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.33](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.32...v0.2.33) (2026-06-07)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.64 ([ad4d0ab](https://github.com/d0ugal/mosquitto-exporter/commit/ad4d0ab3001136ea19d2fe636d84a21d56ad135d))
+* Update module github.com/quic-go/quic-go to v0.60.0 ([538f5ed](https://github.com/d0ugal/mosquitto-exporter/commit/538f5ed557c46f3bcfe0e6e8d45a83e6ca613121))
+
 ## [0.2.32](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.31...v0.2.32) (2026-06-04)
 
 
