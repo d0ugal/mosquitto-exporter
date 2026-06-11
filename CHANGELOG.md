@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.34](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.33...v0.2.34) (2026-06-11)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 4308a22 ([38faab1](https://github.com/d0ugal/mosquitto-exporter/commit/38faab11233c9a21f99836c9eba2ff3332f8def1))
+* Update google.golang.org/genproto/googleapis/api digest to 7ab31c2 ([d31521f](https://github.com/d0ugal/mosquitto-exporter/commit/d31521ffe1146ea0aa2e645c5a34c389ffe07fb2))
+* Update google.golang.org/genproto/googleapis/rpc digest to 4308a22 ([73496fa](https://github.com/d0ugal/mosquitto-exporter/commit/73496faed6a684c9ce0599052cb5f96c0908987b))
+* Update google.golang.org/genproto/googleapis/rpc digest to 7ab31c2 ([7b36a7a](https://github.com/d0ugal/mosquitto-exporter/commit/7b36a7a44ea5da9be4e7f3abdd5df10be2f60ac7))
+* Update module golang.org/x/arch to v0.28.0 ([551971d](https://github.com/d0ugal/mosquitto-exporter/commit/551971df98734ea2304dac4b0e0c0257b43458d0))
+* Update module golang.org/x/crypto to v0.53.0 ([516ccd0](https://github.com/d0ugal/mosquitto-exporter/commit/516ccd0b908327ad00eebcd18944bc50d14b0602))
+* Update module golang.org/x/net to v0.56.0 ([c57f136](https://github.com/d0ugal/mosquitto-exporter/commit/c57f1361c2e3f6fc1563b3f791904ae67eac8549))
+* Update module golang.org/x/sync to v0.21.0 ([90f3b99](https://github.com/d0ugal/mosquitto-exporter/commit/90f3b9951910c8b9a9c36fead9596ed6e4e4df23))
+
 ## [0.2.33](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.32...v0.2.33) (2026-06-07)
 
 
