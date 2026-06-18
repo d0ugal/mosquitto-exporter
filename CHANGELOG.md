@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.36](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.35...v0.2.36) (2026-06-18)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/rpc digest to 62b3387 ([a8826eb](https://github.com/d0ugal/mosquitto-exporter/commit/a8826ebde07f5d800a69bdfbe0c3012976698049))
+* Update module github.com/cenkalti/backoff/v5 to v6 ([af8072c](https://github.com/d0ugal/mosquitto-exporter/commit/af8072c37e54566294b073e937afa5146ef2d459))
+* Update module github.com/pelletier/go-toml/v2 to v2.4.0 ([b28ae64](https://github.com/d0ugal/mosquitto-exporter/commit/b28ae64f47325b8d22f38210d08166138b7e6993))
+* Update module github.com/prometheus/common to v0.69.0 ([9aa9d0d](https://github.com/d0ugal/mosquitto-exporter/commit/9aa9d0da7b3be5154737fe4bf4304bb28acc289e))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.6.1 ([a7dc190](https://github.com/d0ugal/mosquitto-exporter/commit/a7dc190cfb4b060785d2a3ccd027e7abb91d0ad4))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.7.0 ([00856de](https://github.com/d0ugal/mosquitto-exporter/commit/00856de7068cb3659096e29a954f1451e2ebc477))
+
 ## [0.2.35](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.34...v0.2.35) (2026-06-16)
 
 
