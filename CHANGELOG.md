@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.37](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.36...v0.2.37) (2026-06-19)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 87f3d3e ([6fdd001](https://github.com/d0ugal/mosquitto-exporter/commit/6fdd0012360ff604dd135cc5bc0e4a0d89ac8d9a))
+* Update google.golang.org/genproto/googleapis/rpc digest to 87f3d3e ([6887586](https://github.com/d0ugal/mosquitto-exporter/commit/688758684570bddacba44f399f8694719b3a4217))
+
 ## [0.2.36](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.35...v0.2.36) (2026-06-18)
 
 
