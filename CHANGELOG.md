@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.38](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.37...v0.2.38) (2026-06-24)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to b703f56 ([fcd439f](https://github.com/d0ugal/mosquitto-exporter/commit/fcd439fa12be1db1e717135063b9cfbee144440f))
+* Update google.golang.org/genproto/googleapis/rpc digest to b703f56 ([95e1e7a](https://github.com/d0ugal/mosquitto-exporter/commit/95e1e7a5ce77744fb629adbd04f5ac5e223144c3))
+* Update module github.com/pelletier/go-toml/v2 to v2.4.1 ([cadfa5a](https://github.com/d0ugal/mosquitto-exporter/commit/cadfa5a4d51ad3a44b16a7f2e20cc0efe1ca5d39))
+* Update module github.com/pelletier/go-toml/v2 to v2.4.2 ([cb724f5](https://github.com/d0ugal/mosquitto-exporter/commit/cb724f593368f53ae130fab9ecf30ce6c02ee245))
+
 ## [0.2.37](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.36...v0.2.37) (2026-06-19)
 
 
