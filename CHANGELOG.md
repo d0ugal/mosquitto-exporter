@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.39](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.38...v0.2.39) (2026-06-27)
+
+
+### Bug Fixes
+
+* Update module github.com/prometheus/procfs to v0.21.0 ([9931178](https://github.com/d0ugal/mosquitto-exporter/commit/9931178b0aed8a3b8484b13f31faab5cb8c99d35))
+
 ## [0.2.38](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.37...v0.2.38) (2026-06-24)
 
 
