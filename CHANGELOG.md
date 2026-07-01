@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.40](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.39...v0.2.40) (2026-07-01)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 925bb5d ([24a90a5](https://github.com/d0ugal/mosquitto-exporter/commit/24a90a58edb656f30814c2e06bd28d747e6f4cdf))
+* Update google.golang.org/genproto/googleapis/rpc digest to 925bb5d ([1da38d3](https://github.com/d0ugal/mosquitto-exporter/commit/1da38d3ec90808aa392c75d726310d8c5c4376d4))
+* Update module github.com/cenkalti/backoff/v5 to v7 ([d27eae8](https://github.com/d0ugal/mosquitto-exporter/commit/d27eae8343a66bde0475f2522cac884388ff5e74))
+* Update module github.com/klauspost/compress to v1.18.7 ([a305632](https://github.com/d0ugal/mosquitto-exporter/commit/a30563273eb701a18d6282fc652a41f9b09d96d1))
+* Update module github.com/klauspost/compress to v1.19.0 ([9d18c27](https://github.com/d0ugal/mosquitto-exporter/commit/9d18c276e674bec398917b641c6cff6b8a3d8230))
+* Update module github.com/klauspost/cpuid/v2 to v2.4.0 ([f787d75](https://github.com/d0ugal/mosquitto-exporter/commit/f787d75c63dd4eb7666a636807b9aacade32c85b))
+* Update module github.com/prometheus/procfs to v0.21.1 ([9bce3a6](https://github.com/d0ugal/mosquitto-exporter/commit/9bce3a61640391b21d689aedc6469cd904e63085))
+* Update module google.golang.org/grpc to v1.82.0 ([0bf4830](https://github.com/d0ugal/mosquitto-exporter/commit/0bf4830f30153b5d547606d4bc975f2ae2f3697a))
+
 ## [0.2.39](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.38...v0.2.39) (2026-06-27)
 
 
