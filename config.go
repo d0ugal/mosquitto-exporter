@@ -12,6 +12,7 @@ import (
 // MosquittoExporterConfig extends the base configuration with Mosquitto-specific settings
 type MosquittoExporterConfig struct {
 	config.BaseConfig
+
 	Mosquitto MosquittoConfig `yaml:"mosquitto"`
 }
 
@@ -38,12 +39,14 @@ func (c *MosquittoExporterConfig) GetDisplayConfig() map[string]interface{} {
 	cfg["Mosquitto Broker"] = c.Mosquitto.BrokerEndpoint
 	cfg["MQTT Username"] = c.Mosquitto.Username
 	cfg["MQTT Client ID"] = c.Mosquitto.ClientID
+
 	cfg["TLS Enabled"] = c.Mosquitto.TLS.Enabled
 	if c.Mosquitto.TLS.Enabled {
 		cfg["TLS Certificate"] = c.Mosquitto.TLS.CertFile
 		cfg["TLS Key File"] = c.Mosquitto.TLS.KeyFile
 		cfg["TLS Skip Verify"] = c.Mosquitto.TLS.InsecureSkipVerify
 	}
+
 	return cfg
 }
 
@@ -67,6 +70,7 @@ func LoadConfig(configPath string) (*MosquittoExporterConfig, error) {
 	if err := config.ApplyGenericEnvVars(&cfg.BaseConfig); err != nil {
 		return nil, fmt.Errorf("failed to apply generic environment variables: %w", err)
 	}
+
 	if err := applyMosquittoEnvVars(&cfg); err != nil {
 		return nil, fmt.Errorf("failed to apply environment overrides: %w", err)
 	}
@@ -130,6 +134,7 @@ func applyMosquittoEnvVars(cfg *MosquittoExporterConfig) error {
 		if host != "" {
 			cfg.Server.Host = host
 		}
+
 		if port != 0 {
 			cfg.Server.Port = port
 		}
@@ -149,6 +154,7 @@ func setDefaults(cfg *MosquittoExporterConfig) {
 	if cfg.Server.Port == 0 {
 		cfg.Server.Port = 9234
 	}
+
 	if cfg.Server.Host == "" {
 		cfg.Server.Host = "0.0.0.0"
 	}
@@ -158,6 +164,7 @@ func setDefaults(cfg *MosquittoExporterConfig) {
 		enabled := true
 		cfg.Server.EnableWebUI = &enabled
 	}
+
 	if cfg.Server.EnableHealth == nil {
 		enabled := true
 		cfg.Server.EnableHealth = &enabled
@@ -167,6 +174,7 @@ func setDefaults(cfg *MosquittoExporterConfig) {
 	if cfg.Logging.Level == "" {
 		cfg.Logging.Level = "info"
 	}
+
 	if cfg.Logging.Format == "" {
 		cfg.Logging.Format = "json"
 	}
@@ -177,6 +185,7 @@ func getEnv(newName, legacyName string) string {
 	if val := os.Getenv(newName); val != "" {
 		return val
 	}
+
 	return os.Getenv(legacyName)
 }
 
@@ -186,12 +195,15 @@ func parseBindAddress(bindAddress string) (string, int) {
 	for i := len(bindAddress) - 1; i >= 0; i-- {
 		if bindAddress[i] == ':' {
 			host := bindAddress[:i]
+
 			portStr := bindAddress[i+1:]
 			if port, err := strconv.Atoi(portStr); err == nil {
 				return host, port
 			}
+
 			break
 		}
 	}
+
 	return "", 0
 }

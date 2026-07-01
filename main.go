@@ -44,10 +44,13 @@ func main() {
 	// Show configuration if requested
 	if showConfig {
 		displayConfig := cfg.GetDisplayConfig()
+
 		fmt.Printf("Configuration:\n")
+
 		for key, value := range displayConfig {
 			fmt.Printf("  %s: %v\n", key, value)
 		}
+
 		os.Exit(0)
 	}
 
