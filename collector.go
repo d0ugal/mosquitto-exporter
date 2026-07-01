@@ -24,7 +24,7 @@ type MosquittoCollector struct {
 	cancel     context.CancelFunc
 }
 
-// NewMosquittoCollector creates a new Mosquito collector
+// NewMosquittoCollector creates a new Mosquitto collector
 func NewMosquittoCollector(cfg *MosquittoExporterConfig, metrics *MosquittoMetrics, application *app.App) *MosquittoCollector {
 	return &MosquittoCollector{
 		config:  cfg,
@@ -37,10 +37,10 @@ func NewMosquittoCollector(cfg *MosquittoExporterConfig, metrics *MosquittoMetri
 func (mc *MosquittoCollector) Start(ctx context.Context) {
 	mc.ctx, mc.cancel = context.WithCancel(ctx)
 
-	slog.Info("Starting Mosquito collector",
-		"broker", mc.config.Mosquito.BrokerEndpoint,
-		"client_id", mc.config.Mosquito.ClientID,
-		"tls_enabled", mc.config.Mosquito.TLS.Enabled,
+	slog.Info("Starting Mosquitto collector",
+		"broker", mc.config.Mosquitto.BrokerEndpoint,
+		"client_id", mc.config.Mosquitto.ClientID,
+		"tls_enabled", mc.config.Mosquitto.TLS.Enabled,
 	)
 
 	// Set initial connection status to disconnected
@@ -52,7 +52,7 @@ func (mc *MosquittoCollector) Start(ctx context.Context) {
 
 // Stop implements the Collector interface - stops MQTT connection
 func (mc *MosquittoCollector) Stop() {
-	slog.Info("Stopping Mosquito collector")
+	slog.Info("Stopping Mosquitto collector")
 
 	if mc.cancel != nil {
 		mc.cancel()
@@ -69,24 +69,24 @@ func (mc *MosquittoCollector) Stop() {
 func (mc *MosquittoCollector) connectToBroker() {
 	opts := mqtt.NewClientOptions()
 	opts.SetCleanSession(true)
-	opts.AddBroker(mc.config.Mosquito.BrokerEndpoint)
+	opts.AddBroker(mc.config.Mosquitto.BrokerEndpoint)
 
 	// Set client ID if provided
-	if mc.config.Mosquito.ClientID != "" {
-		opts.SetClientID(mc.config.Mosquito.ClientID)
+	if mc.config.Mosquitto.ClientID != "" {
+		opts.SetClientID(mc.config.Mosquitto.ClientID)
 	}
 
 	// Set username and password if provided
-	if mc.config.Mosquito.Username != "" {
-		opts.SetUsername(mc.config.Mosquito.Username)
+	if mc.config.Mosquitto.Username != "" {
+		opts.SetUsername(mc.config.Mosquitto.Username)
 
-		if !mc.config.Mosquito.Password.IsEmpty() {
-			opts.SetPassword(mc.config.Mosquito.Password.Value())
+		if !mc.config.Mosquitto.Password.IsEmpty() {
+			opts.SetPassword(mc.config.Mosquitto.Password.Value())
 		}
 	}
 
 	// Configure TLS if enabled
-	if mc.config.Mosquito.TLS.Enabled {
+	if mc.config.Mosquitto.TLS.Enabled {
 		if err := mc.configureTLS(opts); err != nil {
 			slog.Error("Failed to configure TLS", "error", err)
 			return
@@ -115,7 +115,7 @@ func (mc *MosquittoCollector) connectToBroker() {
 
 				slog.Error("Failed to connect to broker", "error", token.Error())
 			} else {
-				slog.Warn("Timeout connecting to broker", "endpoint", mc.config.Mosquito.BrokerEndpoint)
+				slog.Warn("Timeout connecting to broker", "endpoint", mc.config.Mosquitto.BrokerEndpoint)
 			}
 
 			time.Sleep(5 * time.Second)
@@ -125,11 +125,11 @@ func (mc *MosquittoCollector) connectToBroker() {
 
 // configureTLS sets up TLS configuration
 func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
-	certFile := mc.config.Mosquito.TLS.CertFile
-	keyFile := mc.config.Mosquito.TLS.KeyFile
+	certFile := mc.config.Mosquitto.TLS.CertFile
+	keyFile := mc.config.Mosquitto.TLS.KeyFile
 
 	tlsConfig := &tls.Config{
-		InsecureSkipVerify: mc.config.Mosquito.TLS.InsecureSkipVerify, //nolint:gosec // opt-in via insecure_skip_verify config; defaults to false
+		InsecureSkipVerify: mc.config.Mosquitto.TLS.InsecureSkipVerify, //nolint:gosec // opt-in via insecure_skip_verify config; defaults to false
 		ClientAuth:         tls.NoClientCert,
 	}
 
@@ -149,12 +149,12 @@ func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
 
 	opts.SetTLSConfig(tlsConfig)
 
-	if mc.config.Mosquito.TLS.InsecureSkipVerify {
+	if mc.config.Mosquitto.TLS.InsecureSkipVerify {
 		slog.Warn("TLS certificate verification is disabled; this should only be used for testing")
 	}
 
 	// Warn if endpoint doesn't use TLS scheme
-	endpoint := mc.config.Mosquito.BrokerEndpoint
+	endpoint := mc.config.Mosquitto.BrokerEndpoint
 	if !strings.HasPrefix(endpoint, "ssl://") && !strings.HasPrefix(endpoint, "tls://") {
 		slog.Warn("TLS configured but endpoint doesn't use ssl:// or tls:// scheme", "endpoint", endpoint)
 	}
@@ -164,7 +164,7 @@ func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
 
 // onConnect is called when successfully connected to the broker
 func (mc *MosquittoCollector) onConnect(client mqtt.Client) {
-	slog.Info("Connected to MQTT broker", "broker", mc.config.Mosquito.BrokerEndpoint)
+	slog.Info("Connected to MQTT broker", "broker", mc.config.Mosquitto.BrokerEndpoint)
 
 	// Update connection status metric
 	mc.metrics.SetBrokerConnected(true)
@@ -186,7 +186,7 @@ func (mc *MosquittoCollector) onConnect(client mqtt.Client) {
 
 // onConnectionLost is called when connection to broker is lost
 func (mc *MosquittoCollector) onConnectionLost(client mqtt.Client, err error) {
-	slog.Error("Connection to MQTT broker lost", "error", err, "broker", mc.config.Mosquito.BrokerEndpoint)
+	slog.Error("Connection to MQTT broker lost", "error", err, "broker", mc.config.Mosquitto.BrokerEndpoint)
 
 	// Update connection status metric
 	mc.metrics.SetBrokerConnected(false)

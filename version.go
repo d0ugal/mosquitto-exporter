@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/sapcc/mosquito-exporter/internal/version"
+	"github.com/sapcc/mosquitto-exporter/internal/version"
 )
 
 func versionString() string {

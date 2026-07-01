@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	appName = "Mosquito Exporter"
+	appName = "Mosquitto Exporter"
 )
 
 func main() {
@@ -60,9 +60,9 @@ func main() {
 		Format: cfg.Logging.Format,
 	})
 
-	slog.Info("Starting Mosquito Exporter",
+	slog.Info("Starting Mosquitto Exporter",
 		"version", versionString(),
-		"broker", cfg.Mosquito.BrokerEndpoint,
+		"broker", cfg.Mosquitto.BrokerEndpoint,
 		"bind_address", fmt.Sprintf("%s:%d", cfg.Server.Host, cfg.Server.Port),
 	)
 

@@ -55,6 +55,10 @@ linters:
     dupl:
       # Set threshold for duplicate code detection (default is 150 tokens)
       threshold: 100
+    misspell:
+      # "Mosquitto" (the MQTT broker product name) is flagged as a misspelling of "mosquito"
+      ignore-rules:
+        - mosquitto
 
 formatters:
   enable:
