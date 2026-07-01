@@ -9,14 +9,14 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// MosquittoExporterConfig extends the base configuration with Mosquitto-specific settings
+// MosquittoExporterConfig extends the base configuration with Mosquito-specific settings
 type MosquittoExporterConfig struct {
 	config.BaseConfig
 
-	Mosquitto MosquittoConfig `yaml:"mosquitto"`
+	Mosquito MosquittoConfig `yaml:"mosquito"`
 }
 
-// MosquittoConfig holds Mosquitto broker connection settings
+// MosquittoConfig holds Mosquito broker connection settings
 type MosquittoConfig struct {
 	BrokerEndpoint string                 `yaml:"broker_endpoint"`
 	Username       string                 `yaml:"username"`
@@ -36,15 +36,15 @@ type TLSConfig struct {
 // GetDisplayConfig returns the configuration for display in the web UI
 func (c *MosquittoExporterConfig) GetDisplayConfig() map[string]interface{} {
 	cfg := c.BaseConfig.GetDisplayConfig()
-	cfg["Mosquitto Broker"] = c.Mosquitto.BrokerEndpoint
-	cfg["MQTT Username"] = c.Mosquitto.Username
-	cfg["MQTT Client ID"] = c.Mosquitto.ClientID
+	cfg["Mosquito Broker"] = c.Mosquito.BrokerEndpoint
+	cfg["MQTT Username"] = c.Mosquito.Username
+	cfg["MQTT Client ID"] = c.Mosquito.ClientID
 
-	cfg["TLS Enabled"] = c.Mosquitto.TLS.Enabled
-	if c.Mosquitto.TLS.Enabled {
-		cfg["TLS Certificate"] = c.Mosquitto.TLS.CertFile
-		cfg["TLS Key File"] = c.Mosquitto.TLS.KeyFile
-		cfg["TLS Skip Verify"] = c.Mosquitto.TLS.InsecureSkipVerify
+	cfg["TLS Enabled"] = c.Mosquito.TLS.Enabled
+	if c.Mosquito.TLS.Enabled {
+		cfg["TLS Certificate"] = c.Mosquito.TLS.CertFile
+		cfg["TLS Key File"] = c.Mosquito.TLS.KeyFile
+		cfg["TLS Skip Verify"] = c.Mosquito.TLS.InsecureSkipVerify
 	}
 
 	return cfg
@@ -80,50 +80,50 @@ func LoadConfig(configPath string) (*MosquittoExporterConfig, error) {
 	return &cfg, nil
 }
 
-// applyMosquittoEnvVars applies Mosquitto-specific environment variables
+// applyMosquittoEnvVars applies Mosquito-specific environment variables
 func applyMosquittoEnvVars(cfg *MosquittoExporterConfig) error {
 	// Broker endpoint - support both new and legacy env var names
-	if endpoint := getEnv("MOSQUITTO_BROKER_ENDPOINT", "BROKER_ENDPOINT"); endpoint != "" {
-		cfg.Mosquitto.BrokerEndpoint = endpoint
+	if endpoint := getEnv("MOSQUITO_BROKER_ENDPOINT", "BROKER_ENDPOINT"); endpoint != "" {
+		cfg.Mosquito.BrokerEndpoint = endpoint
 	}
 
 	// Username - support both new and legacy env var names
-	if username := getEnv("MOSQUITTO_USERNAME", "MQTT_USER"); username != "" {
-		cfg.Mosquitto.Username = username
+	if username := getEnv("MOSQUITO_USERNAME", "MQTT_USER"); username != "" {
+		cfg.Mosquito.Username = username
 	}
 
 	// Password - support both new and legacy env var names
-	if password := getEnv("MOSQUITTO_PASSWORD", "MQTT_PASS"); password != "" {
-		cfg.Mosquitto.Password = config.NewSensitiveString(password)
+	if password := getEnv("MOSQUITO_PASSWORD", "MQTT_PASS"); password != "" {
+		cfg.Mosquito.Password = config.NewSensitiveString(password)
 	}
 
 	// Client ID - support both new and legacy env var names
-	if clientID := getEnv("MOSQUITTO_CLIENT_ID", "MQTT_CLIENT_ID"); clientID != "" {
-		cfg.Mosquitto.ClientID = clientID
+	if clientID := getEnv("MOSQUITO_CLIENT_ID", "MQTT_CLIENT_ID"); clientID != "" {
+		cfg.Mosquito.ClientID = clientID
 	}
 
 	// Explicit enable TLS - support both new and legacy env var names
-	if tlsEnabled := getEnv("MOSQUITTO_TLS_ENABLED", "MQTT_TLS_ENABLED"); tlsEnabled != "" {
+	if tlsEnabled := getEnv("MOSQUITO_TLS_ENABLED", "MQTT_TLS_ENABLED"); tlsEnabled != "" {
 		if val, err := strconv.ParseBool(tlsEnabled); err == nil {
-			cfg.Mosquitto.TLS.Enabled = val
+			cfg.Mosquito.TLS.Enabled = val
 		}
 	}
 
 	// TLS settings - support both new and legacy env var names
-	if certFile := getEnv("MOSQUITTO_TLS_CERT_FILE", "MQTT_CERT"); certFile != "" {
-		cfg.Mosquitto.TLS.CertFile = certFile
-		cfg.Mosquitto.TLS.Enabled = true
+	if certFile := getEnv("MOSQUITO_TLS_CERT_FILE", "MQTT_CERT"); certFile != "" {
+		cfg.Mosquito.TLS.CertFile = certFile
+		cfg.Mosquito.TLS.Enabled = true
 	}
 
-	if keyFile := getEnv("MOSQUITTO_TLS_KEY_FILE", "MQTT_KEY"); keyFile != "" {
-		cfg.Mosquitto.TLS.KeyFile = keyFile
-		cfg.Mosquitto.TLS.Enabled = true
+	if keyFile := getEnv("MOSQUITO_TLS_KEY_FILE", "MQTT_KEY"); keyFile != "" {
+		cfg.Mosquito.TLS.KeyFile = keyFile
+		cfg.Mosquito.TLS.Enabled = true
 	}
 
-	if skipVerify := os.Getenv("MOSQUITTO_TLS_INSECURE_SKIP_VERIFY"); skipVerify != "" {
+	if skipVerify := os.Getenv("MOSQUITO_TLS_INSECURE_SKIP_VERIFY"); skipVerify != "" {
 		if val, err := strconv.ParseBool(skipVerify); err == nil {
-			cfg.Mosquitto.TLS.InsecureSkipVerify = val
-			cfg.Mosquitto.TLS.Enabled = true
+			cfg.Mosquito.TLS.InsecureSkipVerify = val
+			cfg.Mosquito.TLS.Enabled = true
 		}
 	}
 
@@ -145,9 +145,9 @@ func applyMosquittoEnvVars(cfg *MosquittoExporterConfig) error {
 
 // setDefaults sets default values for unconfigured options
 func setDefaults(cfg *MosquittoExporterConfig) {
-	// Mosquitto defaults
-	if cfg.Mosquitto.BrokerEndpoint == "" {
-		cfg.Mosquitto.BrokerEndpoint = "tcp://127.0.0.1:1883"
+	// Mosquito defaults
+	if cfg.Mosquito.BrokerEndpoint == "" {
+		cfg.Mosquito.BrokerEndpoint = "tcp://127.0.0.1:1883"
 	}
 
 	// Server defaults (maintain backward compatibility with port 9234)

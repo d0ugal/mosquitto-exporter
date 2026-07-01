@@ -6,7 +6,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 )
 
-// MosquittoCounter exports all counter metrics are already added by mosquitto
+// MosquittoCounter exports all counter metrics are already added by mosquito
 type MosquittoCounter struct {
 	counter
 

@@ -34,7 +34,7 @@ var (
 	}
 )
 
-// MosquittoMetrics manages all Prometheus metrics for the Mosquitto exporter
+// MosquittoMetrics manages all Prometheus metrics for the Mosquito exporter
 type MosquittoMetrics struct {
 	registry             *metrics.Registry
 	counterMetrics       map[string]*MosquittoCounter
@@ -47,31 +47,31 @@ type MosquittoMetrics struct {
 
 // NewMosquittoMetrics creates a new metrics registry
 func NewMosquittoMetrics() *MosquittoMetrics {
-	registry := metrics.NewRegistry("mosquitto_exporter_info")
+	registry := metrics.NewRegistry("mosquito_exporter_info")
 
 	// Create connection status gauge
 	brokerConnectionUp := prometheus.NewGauge(prometheus.GaugeOpts{
-		Name: "mosquitto_broker_connected",
-		Help: "Connection status to the Mosquitto broker (1 = connected, 0 = disconnected)",
+		Name: "mosquito_broker_connected",
+		Help: "Connection status to the Mosquito broker (1 = connected, 0 = disconnected)",
 	})
 	registry.GetRegistry().MustRegister(brokerConnectionUp)
-	registry.AddMetricInfo("mosquitto_broker_connected", "Connection status to the Mosquitto broker (1 = connected, 0 = disconnected)", []string{})
+	registry.AddMetricInfo("mosquito_broker_connected", "Connection status to the Mosquito broker (1 = connected, 0 = disconnected)", []string{})
 
 	// Create last message timestamp gauge
 	lastMessageTimestamp := prometheus.NewGauge(prometheus.GaugeOpts{
-		Name: "mosquitto_last_message_timestamp_seconds",
+		Name: "mosquito_last_message_timestamp_seconds",
 		Help: "Unix timestamp of the last message received from the broker",
 	})
 	registry.GetRegistry().MustRegister(lastMessageTimestamp)
-	registry.AddMetricInfo("mosquitto_last_message_timestamp_seconds", "Unix timestamp of the last message received from the broker", []string{})
+	registry.AddMetricInfo("mosquito_last_message_timestamp_seconds", "Unix timestamp of the last message received from the broker", []string{})
 
 	// Create broker info gauge (value always 1; version is a label)
 	brokerInfo := prometheus.NewGaugeVec(prometheus.GaugeOpts{
-		Name: "mosquitto_broker_info",
-		Help: "Static info about the Mosquitto broker (value is always 1)",
+		Name: "mosquito_broker_info",
+		Help: "Static info about the Mosquito broker (value is always 1)",
 	}, []string{"version"})
 	registry.GetRegistry().MustRegister(brokerInfo)
-	registry.AddMetricInfo("mosquitto_broker_info", "Static info about the Mosquitto broker (value is always 1)", []string{"version"})
+	registry.AddMetricInfo("mosquito_broker_info", "Static info about the Mosquito broker (value is always 1)", []string{"version"})
 
 	return &MosquittoMetrics{
 		registry:             registry,
