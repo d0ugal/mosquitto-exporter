@@ -79,6 +79,7 @@ func (mc *MosquittoCollector) connectToBroker() {
 	// Set username and password if provided
 	if mc.config.Mosquitto.Username != "" {
 		opts.SetUsername(mc.config.Mosquitto.Username)
+
 		if !mc.config.Mosquitto.Password.IsEmpty() {
 			opts.SetPassword(mc.config.Mosquitto.Password.Value())
 		}
@@ -111,10 +112,12 @@ func (mc *MosquittoCollector) connectToBroker() {
 					slog.Info("Successfully connected to MQTT broker")
 					return
 				}
+
 				slog.Error("Failed to connect to broker", "error", token.Error())
 			} else {
 				slog.Warn("Timeout connecting to broker", "endpoint", mc.config.Mosquitto.BrokerEndpoint)
 			}
+
 			time.Sleep(5 * time.Second)
 		}
 	}
@@ -126,7 +129,7 @@ func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
 	keyFile := mc.config.Mosquitto.TLS.KeyFile
 
 	tlsConfig := &tls.Config{
-		InsecureSkipVerify: mc.config.Mosquitto.TLS.InsecureSkipVerify,
+		InsecureSkipVerify: mc.config.Mosquitto.TLS.InsecureSkipVerify, //nolint:gosec // opt-in via insecure_skip_verify config; defaults to false
 		ClientAuth:         tls.NoClientCert,
 	}
 
@@ -140,6 +143,7 @@ func (mc *MosquittoCollector) configureTLS(opts *mqtt.ClientOptions) error {
 		if err != nil {
 			return fmt.Errorf("load client TLS key pair: %w", err)
 		}
+
 		tlsConfig.Certificates = []tls.Certificate{keyPair}
 	}
 
@@ -171,6 +175,7 @@ func (mc *MosquittoCollector) onConnect(client mqtt.Client) {
 		slog.Error("Timeout subscribing to topic $SYS/#")
 		return
 	}
+
 	if err := token.Error(); err != nil {
 		slog.Error("Failed to subscribe to topic $SYS/#", "error", err)
 		return
@@ -239,6 +244,7 @@ func parseTopic(topic string) string {
 	name = strings.ReplaceAll(name, " ", "_")
 	name = strings.ReplaceAll(name, "-", "_")
 	name = strings.ReplaceAll(name, ".", "_")
+
 	return name
 }
 
@@ -254,5 +260,6 @@ func parseValue(payload string) float64 {
 			return value
 		}
 	}
+
 	return 0
 }

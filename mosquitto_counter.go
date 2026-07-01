@@ -8,8 +8,9 @@ import (
 
 // MosquittoCounter exports all counter metrics are already added by mosquitto
 type MosquittoCounter struct {
-	Desc *prometheus.Desc
 	counter
+
+	Desc *prometheus.Desc
 	// ... many more fields
 }
 
@@ -47,5 +48,6 @@ func (c *counter) Set(v float64) {
 	if v < 0 {
 		panic(errors.New("counter cannot decrease in value"))
 	}
+
 	c.value = v
 }
