@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.41](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.40...v0.2.41) (2026-07-05)
+
+
+### Bug Fixes
+
+* Update module github.com/grafana/pyroscope-go to v1.4.0 ([91b240a](https://github.com/d0ugal/mosquitto-exporter/commit/91b240abe1fa77ae5fa27bc62f92f69418e197a9))
+* Update module github.com/pelletier/go-toml/v2 to v2.4.3 ([08bd295](https://github.com/d0ugal/mosquitto-exporter/commit/08bd2950b7fe5903d66426ab95b865bf2743e16d))
+
 ## [0.2.40](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.39...v0.2.40) (2026-07-01)
 
 
