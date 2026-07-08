@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.43](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.42...v0.2.43) (2026-07-08)
+
+
+### Bug Fixes
+
+* Update go toolchain directive to v1.26.5 ([9e78ec1](https://github.com/d0ugal/mosquitto-exporter/commit/9e78ec18842374008e0f4d4c895f24affcbd23be))
+* Update module github.com/d0ugal/promexporter to v1.14.65 ([f906b32](https://github.com/d0ugal/mosquitto-exporter/commit/f906b32a07a60c8a1123dc67255d1d61850c8021))
+
 ## [0.2.42](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.41...v0.2.42) (2026-07-07)
 
 
