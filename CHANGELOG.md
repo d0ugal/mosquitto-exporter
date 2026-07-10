@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.44](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.43...v0.2.44) (2026-07-10)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.66 ([1f449ee](https://github.com/d0ugal/mosquitto-exporter/commit/1f449eef5558c129262936f43db758490b784cf5))
+* Update module github.com/grafana/pyroscope-go to v1.4.1 ([624a02f](https://github.com/d0ugal/mosquitto-exporter/commit/624a02f6732835e3283f7631fc758498e986d5ec))
+* Update module github.com/grafana/pyroscope-go/godeltaprof to v0.1.12 ([e4d289d](https://github.com/d0ugal/mosquitto-exporter/commit/e4d289dbab06ad2616ed11670078f83af6980852))
+* Update module github.com/prometheus/common to v0.70.0 ([5d28bfe](https://github.com/d0ugal/mosquitto-exporter/commit/5d28bfe4c9724dc4aad8f18a4d747dc7e40bb7cf))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.8.0 ([c53ccf9](https://github.com/d0ugal/mosquitto-exporter/commit/c53ccf9b936e3a6ded0981610929c3a0aa05d8ca))
+* Update module golang.org/x/arch to v0.29.0 ([9d2daf5](https://github.com/d0ugal/mosquitto-exporter/commit/9d2daf515757417d8824af185ace6fb87e82e0d0))
+* Update module golang.org/x/crypto to v0.54.0 ([d6e1e1b](https://github.com/d0ugal/mosquitto-exporter/commit/d6e1e1bb1a7ba34e67b543fda5b61effcfa9548c))
+* Update module golang.org/x/net to v0.57.0 ([9f61cd7](https://github.com/d0ugal/mosquitto-exporter/commit/9f61cd7ca800dc322f9b57d4050a0e4fce6527d2))
+
 ## [0.2.43](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.42...v0.2.43) (2026-07-08)
 
 
