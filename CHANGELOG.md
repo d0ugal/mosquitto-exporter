@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.2.47](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.46...v0.2.47) (2026-07-24)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 0afa2a6 ([f3d7414](https://github.com/d0ugal/mosquitto-exporter/commit/f3d74148193094fc024ff631db7a341f99a2c1cf))
+* Update google.golang.org/genproto/googleapis/api digest to 3fe39f3 ([#404](https://github.com/d0ugal/mosquitto-exporter/issues/404)) ([2ae6201](https://github.com/d0ugal/mosquitto-exporter/commit/2ae6201465d62fcd42ae5d4eb1ef04e1300824f0))
+* Update google.golang.org/genproto/googleapis/api digest to 7274b71 ([#403](https://github.com/d0ugal/mosquitto-exporter/issues/403)) ([73b0101](https://github.com/d0ugal/mosquitto-exporter/commit/73b0101846c094e25ca70f31e8645ace4b264e2e))
+* Update google.golang.org/genproto/googleapis/rpc digest to 0afa2a6 ([4fef20d](https://github.com/d0ugal/mosquitto-exporter/commit/4fef20d26cb0dc17a7ff4d911d1937860f3308da))
+* Update google.golang.org/genproto/googleapis/rpc digest to 3fe39f3 ([#405](https://github.com/d0ugal/mosquitto-exporter/issues/405)) ([c7f0b14](https://github.com/d0ugal/mosquitto-exporter/commit/c7f0b1447ea488f4c31fce4da7b12ac0d5536b95))
+* Update module github.com/gabriel-vasile/mimetype to v1.4.14 ([eccc809](https://github.com/d0ugal/mosquitto-exporter/commit/eccc80951658a4a88b18aac1406c196f8743ac00))
+* Update module github.com/gabriel-vasile/mimetype to v1.4.15 ([#406](https://github.com/d0ugal/mosquitto-exporter/issues/406)) ([145e365](https://github.com/d0ugal/mosquitto-exporter/commit/145e36509dcaa1234c00d4f0e7373b7f3a41b36c))
+* Update module github.com/go-logr/logr to v1.4.4 ([23c0bed](https://github.com/d0ugal/mosquitto-exporter/commit/23c0bed9ef5f8267fde340b7bad54ec6c32bb15c))
+* Update module github.com/klauspost/compress to v1.19.1 ([4a97dd9](https://github.com/d0ugal/mosquitto-exporter/commit/4a97dd938206c2321974c1331db78d92f2bb606f))
+* Update module github.com/leodido/go-urn to v1.5.0 ([#401](https://github.com/d0ugal/mosquitto-exporter/issues/401)) ([3c4c6b3](https://github.com/d0ugal/mosquitto-exporter/commit/3c4c6b37e840f9823254b271e46d2c73f8cdd0cb))
+* Update module github.com/mattn/go-isatty to v0.0.23 ([4fe1e5e](https://github.com/d0ugal/mosquitto-exporter/commit/4fe1e5eda292858d55a71635c551d270a2376500))
+* Update module github.com/mattn/go-isatty to v0.0.24 ([#407](https://github.com/d0ugal/mosquitto-exporter/issues/407)) ([8ef7927](https://github.com/d0ugal/mosquitto-exporter/commit/8ef7927842d0da03bede9d5b56e9a14ad3f26c29))
+* Update module github.com/prometheus/client_golang to v1.24.0 ([20f3c59](https://github.com/d0ugal/mosquitto-exporter/commit/20f3c595de7fe4243e50760b158155effa91c0ec))
+* Update module github.com/prometheus/client_golang to v1.24.1 ([#408](https://github.com/d0ugal/mosquitto-exporter/issues/408)) ([538ed4d](https://github.com/d0ugal/mosquitto-exporter/commit/538ed4dbbd6f34fe5bb40117922d02aeebf314a2))
+* Update module github.com/prometheus/common to v0.70.1 ([a57c2b4](https://github.com/d0ugal/mosquitto-exporter/commit/a57c2b4a0a8a19aafe46b61fe6193cf91a7d5d6a))
+* Update module go.opentelemetry.io/proto/otlp to v1.11.0 ([6a412e8](https://github.com/d0ugal/mosquitto-exporter/commit/6a412e85150e8125aa87c3d3569f3cdab082efaa))
+
 ## [0.2.46](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.45...v0.2.46) (2026-07-16)
 
 
