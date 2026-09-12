@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.2.50](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.49...v0.2.50) (2026-09-12)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to f61a6ca ([#495](https://github.com/d0ugal/mosquitto-exporter/issues/495)) ([e7115f5](https://github.com/d0ugal/mosquitto-exporter/commit/e7115f5bae58ef4f4a9ed2c7dd239965186455c9))
+* Update google.golang.org/genproto/googleapis/api digest to f8649dd ([#484](https://github.com/d0ugal/mosquitto-exporter/issues/484)) ([b11d0c7](https://github.com/d0ugal/mosquitto-exporter/commit/b11d0c7c7fc5b212792ad8a58a50307bcb410b46))
+* Update google.golang.org/genproto/googleapis/rpc digest to f61a6ca ([#496](https://github.com/d0ugal/mosquitto-exporter/issues/496)) ([7e54b37](https://github.com/d0ugal/mosquitto-exporter/commit/7e54b37108e33e3bd057753fcd47f29010bc3d29))
+* Update google.golang.org/genproto/googleapis/rpc digest to f8649dd ([#485](https://github.com/d0ugal/mosquitto-exporter/issues/485)) ([2a4406f](https://github.com/d0ugal/mosquitto-exporter/commit/2a4406f298d81fab06a834b70c8fe988b543be18))
+* Update module github.com/bytedance/sonic to v1.15.4 ([#494](https://github.com/d0ugal/mosquitto-exporter/issues/494)) ([23ab1d6](https://github.com/d0ugal/mosquitto-exporter/commit/23ab1d66ac05b2c4a787780ca52c7731de8a1e6c))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.9.1 ([#493](https://github.com/d0ugal/mosquitto-exporter/issues/493)) ([7cc5ad7](https://github.com/d0ugal/mosquitto-exporter/commit/7cc5ad730b8f94535ef5ad7cacb1fcd26aac97ed))
+* Update module golang.org/x/arch to v0.31.0 ([#487](https://github.com/d0ugal/mosquitto-exporter/issues/487)) ([2f5d474](https://github.com/d0ugal/mosquitto-exporter/commit/2f5d474917b3e49c0c0918aeb12cd3983a46b1d6))
+* Update module golang.org/x/crypto to v0.57.0 ([#491](https://github.com/d0ugal/mosquitto-exporter/issues/491)) ([e867d77](https://github.com/d0ugal/mosquitto-exporter/commit/e867d7752c68db12f252155f23105ae23c833217))
+* Update module golang.org/x/net to v0.59.0 ([#492](https://github.com/d0ugal/mosquitto-exporter/issues/492)) ([02c45d6](https://github.com/d0ugal/mosquitto-exporter/commit/02c45d6d25ff141b0e5578adebd0d98fd46563af))
+* Update module golang.org/x/sync to v0.23.0 ([#488](https://github.com/d0ugal/mosquitto-exporter/issues/488)) ([9a4cf54](https://github.com/d0ugal/mosquitto-exporter/commit/9a4cf542a892150d31f5211035acf4efdbd58258))
+* Update module golang.org/x/sys to v0.48.0 ([#489](https://github.com/d0ugal/mosquitto-exporter/issues/489)) ([6c1fbbc](https://github.com/d0ugal/mosquitto-exporter/commit/6c1fbbc72b5b9dd6a4abdc121da5a0a284c435d7))
+* Update module golang.org/x/text to v0.42.0 ([#490](https://github.com/d0ugal/mosquitto-exporter/issues/490)) ([8dde82d](https://github.com/d0ugal/mosquitto-exporter/commit/8dde82dc90e9704349bdd1ecf9147df52224e3b9))
+
 ## [0.2.49](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.48...v0.2.49) (2026-09-05)
 
 
