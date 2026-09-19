@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.51](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.50...v0.2.51) (2026-09-19)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to cecb647 ([#510](https://github.com/d0ugal/mosquitto-exporter/issues/510)) ([bf5b53b](https://github.com/d0ugal/mosquitto-exporter/commit/bf5b53b9c985745b732b78209505df288159c4d2))
+* Update google.golang.org/genproto/googleapis/api digest to eeb232e ([#503](https://github.com/d0ugal/mosquitto-exporter/issues/503)) ([1523f0d](https://github.com/d0ugal/mosquitto-exporter/commit/1523f0d45e8e8b6c0c6a57494943f1f6d24d1997))
+* Update google.golang.org/genproto/googleapis/rpc digest to cecb647 ([#511](https://github.com/d0ugal/mosquitto-exporter/issues/511)) ([2020ad0](https://github.com/d0ugal/mosquitto-exporter/commit/2020ad0b155e311f4eff25a495f0efa795b3f9c9))
+* Update google.golang.org/genproto/googleapis/rpc digest to eeb232e ([#506](https://github.com/d0ugal/mosquitto-exporter/issues/506)) ([24e9412](https://github.com/d0ugal/mosquitto-exporter/commit/24e9412bd52eb53a7800545c5832a916674498a2))
+
 ## [0.2.50](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.49...v0.2.50) (2026-09-12)
 
 
