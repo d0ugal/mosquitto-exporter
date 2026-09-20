@@ -11,7 +11,7 @@ import (
 
 // MosquittoExporterConfig extends the base configuration with Mosquitto-specific settings
 type MosquittoExporterConfig struct {
-	config.BaseConfig
+	config.BaseConfig `yaml:",inline"`
 
 	Mosquitto MosquittoConfig `yaml:"mosquitto"`
 }
