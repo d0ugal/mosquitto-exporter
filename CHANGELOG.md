@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.51](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.50...v0.2.51) (2026-09-22)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to b142276 ([#516](https://github.com/d0ugal/mosquitto-exporter/issues/516)) ([f5a642b](https://github.com/d0ugal/mosquitto-exporter/commit/f5a642b85b7ae6b9baf5224a98aa7c59ce386587))
+* Update google.golang.org/genproto/googleapis/api digest to cecb647 ([#510](https://github.com/d0ugal/mosquitto-exporter/issues/510)) ([bf5b53b](https://github.com/d0ugal/mosquitto-exporter/commit/bf5b53b9c985745b732b78209505df288159c4d2))
+* Update google.golang.org/genproto/googleapis/api digest to eeb232e ([#503](https://github.com/d0ugal/mosquitto-exporter/issues/503)) ([1523f0d](https://github.com/d0ugal/mosquitto-exporter/commit/1523f0d45e8e8b6c0c6a57494943f1f6d24d1997))
+* Update google.golang.org/genproto/googleapis/rpc digest to b142276 ([#517](https://github.com/d0ugal/mosquitto-exporter/issues/517)) ([7f25d62](https://github.com/d0ugal/mosquitto-exporter/commit/7f25d62215abb197d322c713811d50f9943f211c))
+* Update google.golang.org/genproto/googleapis/rpc digest to cecb647 ([#511](https://github.com/d0ugal/mosquitto-exporter/issues/511)) ([2020ad0](https://github.com/d0ugal/mosquitto-exporter/commit/2020ad0b155e311f4eff25a495f0efa795b3f9c9))
+* Update google.golang.org/genproto/googleapis/rpc digest to eeb232e ([#506](https://github.com/d0ugal/mosquitto-exporter/issues/506)) ([24e9412](https://github.com/d0ugal/mosquitto-exporter/commit/24e9412bd52eb53a7800545c5832a916674498a2))
+* Update module github.com/go-playground/universal-translator to v0.18.2 ([#513](https://github.com/d0ugal/mosquitto-exporter/issues/513)) ([123e7a8](https://github.com/d0ugal/mosquitto-exporter/commit/123e7a85e930c0c3081508ac858c36e960d8d177))
+* Update module github.com/go-playground/validator/v10 to v10.30.5 ([#514](https://github.com/d0ugal/mosquitto-exporter/issues/514)) ([18d77f5](https://github.com/d0ugal/mosquitto-exporter/commit/18d77f5ad3f70e876bcd77736bc8e7fc9746d1a9))
+* Update module github.com/quic-go/quic-go to v0.63.0 ([#518](https://github.com/d0ugal/mosquitto-exporter/issues/518)) ([2245a40](https://github.com/d0ugal/mosquitto-exporter/commit/2245a40f58b9d00339f81c32d6802f5eccba49dc))
+
 ## [0.2.50](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.49...v0.2.50) (2026-09-12)
 
 
