@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.52](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.51...v0.2.52) (2026-09-25)
+
+
+### Bug Fixes
+
+* Update module github.com/klauspost/compress to v1.20.1 ([#520](https://github.com/d0ugal/mosquitto-exporter/issues/520)) ([1c10755](https://github.com/d0ugal/mosquitto-exporter/commit/1c1075543a7897cf785a9653a4edfe0e9feeb4c5))
+
 ## [0.2.51](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.50...v0.2.51) (2026-09-22)
 
 
