@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.52](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.51...v0.2.52) (2026-09-29)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 8a89bd6 ([#526](https://github.com/d0ugal/mosquitto-exporter/issues/526)) ([a880a87](https://github.com/d0ugal/mosquitto-exporter/commit/a880a87d362cd053404d8fb5ebee4450f7143f8b))
+* Update google.golang.org/genproto/googleapis/rpc digest to 8a89bd6 ([#528](https://github.com/d0ugal/mosquitto-exporter/issues/528)) ([9cd83c6](https://github.com/d0ugal/mosquitto-exporter/commit/9cd83c6dc0b67c1ae07068558d462bd09f430e52))
+* Update module github.com/go-playground/locales to v0.14.2 ([#525](https://github.com/d0ugal/mosquitto-exporter/issues/525)) ([c2f7b44](https://github.com/d0ugal/mosquitto-exporter/commit/c2f7b44c19003545b54335e91f99587f6be820d4))
+* Update module github.com/goccy/go-json to v0.11.0 ([#523](https://github.com/d0ugal/mosquitto-exporter/issues/523)) ([413bb3f](https://github.com/d0ugal/mosquitto-exporter/commit/413bb3f6dfd7d7b5e85212940c22315147831922))
+* Update module github.com/goccy/go-json to v0.11.1 ([#524](https://github.com/d0ugal/mosquitto-exporter/issues/524)) ([ea952f1](https://github.com/d0ugal/mosquitto-exporter/commit/ea952f166430f3a774c5267f8b0eab2463ab55e8))
+* Update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.31.0 ([#522](https://github.com/d0ugal/mosquitto-exporter/issues/522)) ([6b08f44](https://github.com/d0ugal/mosquitto-exporter/commit/6b08f44e1437bc8520a9e88315ed0b9f09b1b1b8))
+* Update module github.com/klauspost/compress to v1.20.1 ([#520](https://github.com/d0ugal/mosquitto-exporter/issues/520)) ([1c10755](https://github.com/d0ugal/mosquitto-exporter/commit/1c1075543a7897cf785a9653a4edfe0e9feeb4c5))
+* Update module github.com/prometheus/common to v0.72.0 ([#527](https://github.com/d0ugal/mosquitto-exporter/issues/527)) ([59acd2c](https://github.com/d0ugal/mosquitto-exporter/commit/59acd2c1334a9fd5a4f1e037600cc45847f5e81e))
+* Update module google.golang.org/grpc to v1.84.0 ([#508](https://github.com/d0ugal/mosquitto-exporter/issues/508)) ([6589f12](https://github.com/d0ugal/mosquitto-exporter/commit/6589f12fea7b87f1c69127cc21b4d0d3b65afab0))
+
 ## [0.2.51](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.50...v0.2.51) (2026-09-22)
 
 
