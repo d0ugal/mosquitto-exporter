@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.53](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.52...v0.2.53) (2026-10-02)
+
+
+### Bug Fixes
+
+* add missing yaml inline tag for embedded BaseConfig ([#512](https://github.com/d0ugal/mosquitto-exporter/issues/512)) ([52f4ca4](https://github.com/d0ugal/mosquitto-exporter/commit/52f4ca4e65b879aaa123b9605bcc4fa6785fdc94))
+* Update module github.com/d0ugal/promexporter to v1.14.70 ([#531](https://github.com/d0ugal/mosquitto-exporter/issues/531)) ([373539b](https://github.com/d0ugal/mosquitto-exporter/commit/373539b7cc1390129bd4b1cabef271c4a0510ee8))
+* Update module github.com/d0ugal/promexporter to v1.14.71 ([#535](https://github.com/d0ugal/mosquitto-exporter/issues/535)) ([7953b62](https://github.com/d0ugal/mosquitto-exporter/commit/7953b6275ebbbd9e40045b14bd78a836123b76f2))
+* Update module github.com/goccy/go-json to v0.11.2 ([#529](https://github.com/d0ugal/mosquitto-exporter/issues/529)) ([9c8b020](https://github.com/d0ugal/mosquitto-exporter/commit/9c8b020af74951c238b952a3374176b08ea80fe3))
+* Update module github.com/grafana/pyroscope-go to v1.4.3 ([#532](https://github.com/d0ugal/mosquitto-exporter/issues/532)) ([5811fbe](https://github.com/d0ugal/mosquitto-exporter/commit/5811fbe58be4604f38693dac24285a9e2796381d))
+* Update module go.opentelemetry.io/proto/otlp to v1.11.1 ([#533](https://github.com/d0ugal/mosquitto-exporter/issues/533)) ([46e348c](https://github.com/d0ugal/mosquitto-exporter/commit/46e348c9f11876cafac3124cd2d1ea2e64f3fbab))
+* Update opentelemetry-go monorepo to v1.47.0 ([#534](https://github.com/d0ugal/mosquitto-exporter/issues/534)) ([747cc05](https://github.com/d0ugal/mosquitto-exporter/commit/747cc056d78596c9392dc5444196d0586629f052))
+* Update opentelemetry-go-contrib monorepo to v0.72.0 ([#536](https://github.com/d0ugal/mosquitto-exporter/issues/536)) ([0c4c2a1](https://github.com/d0ugal/mosquitto-exporter/commit/0c4c2a1ea6a01294af70bb215c88d2a04f14f37c))
+
 ## [0.2.52](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.51...v0.2.52) (2026-09-29)
 
 
