@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.54](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.53...v0.2.54) (2026-10-07)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to fad4113 ([#537](https://github.com/d0ugal/mosquitto-exporter/issues/537)) ([b7a1ac5](https://github.com/d0ugal/mosquitto-exporter/commit/b7a1ac5ac1db5d40b529afd988e7e62352b34387))
+* Update google.golang.org/genproto/googleapis/rpc digest to fad4113 ([#538](https://github.com/d0ugal/mosquitto-exporter/issues/538)) ([ab31494](https://github.com/d0ugal/mosquitto-exporter/commit/ab31494c404f8410494c6c486687732eb0f59e18))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.9.2 ([#540](https://github.com/d0ugal/mosquitto-exporter/issues/540)) ([3f25596](https://github.com/d0ugal/mosquitto-exporter/commit/3f255968650ed960a6893bd5928a5cfff6e0fbc9))
+
 ## [0.2.53](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.52...v0.2.53) (2026-10-02)
 
 
