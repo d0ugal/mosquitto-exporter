@@ -25,6 +25,33 @@ type MosquittoConfig struct {
 	TLS            TLSConfig              `yaml:"tls"`
 }
 
+// UnmarshalYAML decodes the password as a plain YAML string, because
+// config.SensitiveString from promexporter only implements UnmarshalJSON.
+// This can be dropped once promexporter adds UnmarshalYAML to SensitiveString.
+func (c *MosquittoConfig) UnmarshalYAML(value *yaml.Node) error {
+	var aux struct {
+		BrokerEndpoint string    `yaml:"broker_endpoint"`
+		Username       string    `yaml:"username"`
+		Password       string    `yaml:"password"`
+		ClientID       string    `yaml:"client_id"`
+		TLS            TLSConfig `yaml:"tls"`
+	}
+
+	if err := value.Decode(&aux); err != nil {
+		return err
+	}
+
+	*c = MosquittoConfig{
+		BrokerEndpoint: aux.BrokerEndpoint,
+		Username:       aux.Username,
+		Password:       config.NewSensitiveString(aux.Password),
+		ClientID:       aux.ClientID,
+		TLS:            aux.TLS,
+	}
+
+	return nil
+}
+
 // TLSConfig holds TLS/SSL settings
 type TLSConfig struct {
 	Enabled            bool   `yaml:"enabled"`
