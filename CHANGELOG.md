@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.2.55](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.54...v0.2.55) (2026-10-14)
+
+
+### Bug Fixes
+
+* decode YAML mosquitto.password into SensitiveString ([c0a2fe4](https://github.com/d0ugal/mosquitto-exporter/commit/c0a2fe42c81a66455c63e964feb0b56d90ded0a5))
+* Update go toolchain directive to v1.27.2 ([#545](https://github.com/d0ugal/mosquitto-exporter/issues/545)) ([5192bb6](https://github.com/d0ugal/mosquitto-exporter/commit/5192bb651575e4f845b103213be4083710ab9ba4))
+* Update google.golang.org/genproto/googleapis/api digest to 4341edf ([#557](https://github.com/d0ugal/mosquitto-exporter/issues/557)) ([17156de](https://github.com/d0ugal/mosquitto-exporter/commit/17156de1f9f9ba5a0f96f9e42379f9e36eeadb78))
+* Update google.golang.org/genproto/googleapis/rpc digest to 4341edf ([#558](https://github.com/d0ugal/mosquitto-exporter/issues/558)) ([c834c28](https://github.com/d0ugal/mosquitto-exporter/commit/c834c28576526022dc49423a60f3dc1b57851240))
+* Update module github.com/d0ugal/promexporter to v1.14.72 ([#562](https://github.com/d0ugal/mosquitto-exporter/issues/562)) ([6e2fc5f](https://github.com/d0ugal/mosquitto-exporter/commit/6e2fc5f7b5099086ff873bf160500b7af8a15516))
+* Update module github.com/klauspost/compress to v1.20.3 ([#556](https://github.com/d0ugal/mosquitto-exporter/issues/556)) ([897fc31](https://github.com/d0ugal/mosquitto-exporter/commit/897fc317f965568d8ba594198e555aefa65e23aa))
+* Update module github.com/prometheus/client_golang to v1.25.0 ([#542](https://github.com/d0ugal/mosquitto-exporter/issues/542)) ([134fb1e](https://github.com/d0ugal/mosquitto-exporter/commit/134fb1eb491c06be6c523315a685e687c56365a5))
+* Update module github.com/prometheus/common to v0.72.1 ([#555](https://github.com/d0ugal/mosquitto-exporter/issues/555)) ([ef43971](https://github.com/d0ugal/mosquitto-exporter/commit/ef43971d94e213b13e1e0bf9e8b2b69d5b68e0dc))
+* Update module golang.org/x/arch to v0.32.0 ([#548](https://github.com/d0ugal/mosquitto-exporter/issues/548)) ([de75214](https://github.com/d0ugal/mosquitto-exporter/commit/de7521451a08d51a5d110f17bb64509dde2a35c4))
+* Update module golang.org/x/crypto to v0.58.0 ([#550](https://github.com/d0ugal/mosquitto-exporter/issues/550)) ([54abde8](https://github.com/d0ugal/mosquitto-exporter/commit/54abde8d845a4573195a2bc286cc6b7dd4db78b0))
+* Update module golang.org/x/net to v0.60.0 ([#546](https://github.com/d0ugal/mosquitto-exporter/issues/546)) ([818e656](https://github.com/d0ugal/mosquitto-exporter/commit/818e6564a3b9983bd6b6502cfb908c8b93206062))
+* Update module golang.org/x/net to v0.61.0 ([#552](https://github.com/d0ugal/mosquitto-exporter/issues/552)) ([f6d02ac](https://github.com/d0ugal/mosquitto-exporter/commit/f6d02ac194207a962ede5a227b7ba7feb2531c10))
+* Update module golang.org/x/sync to v0.24.0 ([#549](https://github.com/d0ugal/mosquitto-exporter/issues/549)) ([98e4648](https://github.com/d0ugal/mosquitto-exporter/commit/98e46489e8595b6ee6cfe21f68b395a0a3a6345c))
+* Update module golang.org/x/sys to v0.49.0 ([#551](https://github.com/d0ugal/mosquitto-exporter/issues/551)) ([7c37d5a](https://github.com/d0ugal/mosquitto-exporter/commit/7c37d5a874df27a77213a7327937d5cd3ed0f155))
+* Update module golang.org/x/text to v0.43.0 ([#553](https://github.com/d0ugal/mosquitto-exporter/issues/553)) ([3829e0d](https://github.com/d0ugal/mosquitto-exporter/commit/3829e0d4a74ba1598087edb430bd0edf307acfd1))
+* use upstream SensitiveString YAML support (promexporter v1.14.72) ([50d6d7f](https://github.com/d0ugal/mosquitto-exporter/commit/50d6d7f03a1d0ccc9c420c09d40b4540ac4bbb23))
+
 ## [0.2.54](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.53...v0.2.54) (2026-10-07)
 
 
