@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.56](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.55...v0.2.56) (2026-10-17)
+
+
+### Bug Fixes
+
+* Update module github.com/gabriel-vasile/mimetype to v1.4.16 ([#568](https://github.com/d0ugal/mosquitto-exporter/issues/568)) ([f7ebd24](https://github.com/d0ugal/mosquitto-exporter/commit/f7ebd24c63cc8a74186675086a7f51bcaa338ad8))
+* Update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.32.0 ([#563](https://github.com/d0ugal/mosquitto-exporter/issues/563)) ([ffee46b](https://github.com/d0ugal/mosquitto-exporter/commit/ffee46b33ce6500b815cd9888f63fd567607c9b6))
+* Update module github.com/klauspost/cpuid/v2 to v2.4.1 ([#566](https://github.com/d0ugal/mosquitto-exporter/issues/566)) ([3b114bf](https://github.com/d0ugal/mosquitto-exporter/commit/3b114bf787743f255699687993c5e2f9300ce838))
+* Update module github.com/quic-go/quic-go to v0.64.0 ([#565](https://github.com/d0ugal/mosquitto-exporter/issues/565)) ([aca59f6](https://github.com/d0ugal/mosquitto-exporter/commit/aca59f63a7bcb95b60a1f87d43e1ce4847b76094))
+
 ## [0.2.55](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.54...v0.2.55) (2026-10-14)
 
 
