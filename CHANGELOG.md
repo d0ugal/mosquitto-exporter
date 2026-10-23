@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.57](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.56...v0.2.57) (2026-10-23)
+
+
+### Bug Fixes
+
+* Update go toolchain directive to v1.27.3 ([#573](https://github.com/d0ugal/mosquitto-exporter/issues/573)) ([805dea1](https://github.com/d0ugal/mosquitto-exporter/commit/805dea11c5f3eeb2ba9ac29cfdb68c3af19d4675))
+* Update google.golang.org/genproto/googleapis/api digest to ce908d2 ([#569](https://github.com/d0ugal/mosquitto-exporter/issues/569)) ([762384f](https://github.com/d0ugal/mosquitto-exporter/commit/762384fb14306166171e0654367524c8c6bc1046))
+* Update google.golang.org/genproto/googleapis/rpc digest to ce908d2 ([#570](https://github.com/d0ugal/mosquitto-exporter/issues/570)) ([4c9c1a2](https://github.com/d0ugal/mosquitto-exporter/commit/4c9c1a23edabb733ee5ac7211552574dd64180ee))
+* Update module github.com/bytedance/sonic/loader to v0.5.3 ([#576](https://github.com/d0ugal/mosquitto-exporter/issues/576)) ([a37e8db](https://github.com/d0ugal/mosquitto-exporter/commit/a37e8dbc4d0bfb694b29cec61c63949825377f6e))
+* Update module github.com/d0ugal/promexporter to v1.14.73 ([#574](https://github.com/d0ugal/mosquitto-exporter/issues/574)) ([4620166](https://github.com/d0ugal/mosquitto-exporter/commit/462016602e3806dcda6e599cc93c473ee7ae17fd))
+* Update module github.com/prometheus/procfs to v0.23.0 ([#582](https://github.com/d0ugal/mosquitto-exporter/issues/582)) ([3645cd3](https://github.com/d0ugal/mosquitto-exporter/commit/3645cd3fcd0a2a752d15157679aab8dbbf32b15c))
+* Update module github.com/quic-go/quic-go to v0.64.1 ([#575](https://github.com/d0ugal/mosquitto-exporter/issues/575)) ([0b5e91d](https://github.com/d0ugal/mosquitto-exporter/commit/0b5e91de7e4a87f441200f70d0caae2f18f121b3))
+
 ## [0.2.56](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.55...v0.2.56) (2026-10-17)
 
 
