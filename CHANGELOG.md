@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.2.59](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.58...v0.2.59) (2026-10-31)
+
+
+### Bug Fixes
+
+* Update module github.com/gin-contrib/sse to v1.2.0 ([#600](https://github.com/d0ugal/mosquitto-exporter/issues/600)) ([86830bd](https://github.com/d0ugal/mosquitto-exporter/commit/86830bdc05e802a1f95e2272834bd8c651ba4d90))
+* Update module github.com/goccy/go-json to v0.12.0 ([#596](https://github.com/d0ugal/mosquitto-exporter/issues/596)) ([9748994](https://github.com/d0ugal/mosquitto-exporter/commit/97489942c92c3f5c1086681c41a8dc31b230315f))
+* Update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.33.0 ([#590](https://github.com/d0ugal/mosquitto-exporter/issues/590)) ([2c5f4ee](https://github.com/d0ugal/mosquitto-exporter/commit/2c5f4eee9df8a99a0c58b517fa99abe052d71548))
+* Update module github.com/hashicorp/go-uuid to v1.0.4 ([#595](https://github.com/d0ugal/mosquitto-exporter/issues/595)) ([8ef36d6](https://github.com/d0ugal/mosquitto-exporter/commit/8ef36d68bf08aa89209e2b31b10c4948cbb8b2f0))
+* Update module github.com/pandatix/go-abnf to v0.5.3 ([#597](https://github.com/d0ugal/mosquitto-exporter/issues/597)) ([0eb659c](https://github.com/d0ugal/mosquitto-exporter/commit/0eb659cfd089f495e3f6d93c2b34e30732bf2c15))
+* Update module github.com/pandatix/go-abnf to v0.5.4 ([#599](https://github.com/d0ugal/mosquitto-exporter/issues/599)) ([38feebc](https://github.com/d0ugal/mosquitto-exporter/commit/38feebc2c227529e29b787d9b498f14ab6972213))
+* Update module github.com/pandatix/go-abnf to v0.5.5 ([#601](https://github.com/d0ugal/mosquitto-exporter/issues/601)) ([8425a32](https://github.com/d0ugal/mosquitto-exporter/commit/8425a3226a6375a5d47b972918b5fd3961e04826))
+* Update module github.com/prometheus/common to v0.73.0 ([#594](https://github.com/d0ugal/mosquitto-exporter/issues/594)) ([e090d1e](https://github.com/d0ugal/mosquitto-exporter/commit/e090d1e72dd60549c238bba5e9062b5b89e60739))
+* Update module github.com/prometheus/common to v0.73.1 ([#598](https://github.com/d0ugal/mosquitto-exporter/issues/598)) ([3c8e746](https://github.com/d0ugal/mosquitto-exporter/commit/3c8e74606acebe6b41df8b608bfc1f4ddb2352ec))
+* Update module golang.org/x/net to v0.62.0 ([#593](https://github.com/d0ugal/mosquitto-exporter/issues/593)) ([e000ee6](https://github.com/d0ugal/mosquitto-exporter/commit/e000ee67b8654d384ed90492620768681ecff08f))
+* Update module google.golang.org/grpc to v1.85.0 ([#591](https://github.com/d0ugal/mosquitto-exporter/issues/591)) ([03aaa0a](https://github.com/d0ugal/mosquitto-exporter/commit/03aaa0aacdbd270df4e66ba0e569a1afef2441d8))
+
 ## [0.2.58](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.57...v0.2.58) (2026-10-27)
 
 
