@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.60](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.59...v0.2.60) (2026-11-06)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to d1e00e9 ([#608](https://github.com/d0ugal/mosquitto-exporter/issues/608)) ([211f22b](https://github.com/d0ugal/mosquitto-exporter/commit/211f22bf4dbda661f5072ed53c6174bb8a826464))
+* Update google.golang.org/genproto/googleapis/rpc digest to d1e00e9 ([#609](https://github.com/d0ugal/mosquitto-exporter/issues/609)) ([ac08f1f](https://github.com/d0ugal/mosquitto-exporter/commit/ac08f1f61788067352cbf5d3b2a65c8d3e7831e3))
+* Update module github.com/klauspost/cpuid/v2 to v2.4.2 ([#605](https://github.com/d0ugal/mosquitto-exporter/issues/605)) ([aa083ef](https://github.com/d0ugal/mosquitto-exporter/commit/aa083efa647772744f688499819182a52c1e8156))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.9.3 ([#607](https://github.com/d0ugal/mosquitto-exporter/issues/607)) ([60e53a6](https://github.com/d0ugal/mosquitto-exporter/commit/60e53a6da604d7a9d65d7241400bc6202b868ea7))
+
 ## [0.2.59](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.58...v0.2.59) (2026-11-03)
 
 
