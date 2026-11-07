@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.61](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.60...v0.2.61) (2026-11-07)
+
+
+### Bug Fixes
+
+* Update module go.mongodb.org/mongo-driver/v2 to v2.10.0 ([#614](https://github.com/d0ugal/mosquitto-exporter/issues/614)) ([606e9c0](https://github.com/d0ugal/mosquitto-exporter/commit/606e9c0cb3791a7f23250ed302aae7df1eb5e0db))
+
 ## [0.2.60](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.59...v0.2.60) (2026-11-06)
 
 
