@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.61](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.60...v0.2.61) (2026-11-10)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 09e21b2 ([#620](https://github.com/d0ugal/mosquitto-exporter/issues/620)) ([165e2c0](https://github.com/d0ugal/mosquitto-exporter/commit/165e2c0cc32f67dad2f581084b4d3d4ea9afa798))
+* Update google.golang.org/genproto/googleapis/rpc digest to 09e21b2 ([#621](https://github.com/d0ugal/mosquitto-exporter/issues/621)) ([686f0c9](https://github.com/d0ugal/mosquitto-exporter/commit/686f0c98de09c34bc6888bf6033798f431284b3c))
+* Update module github.com/gin-contrib/sse to v1.2.1 ([#616](https://github.com/d0ugal/mosquitto-exporter/issues/616)) ([4633777](https://github.com/d0ugal/mosquitto-exporter/commit/4633777a4536843b65bf516972d3ac44b35f6cd9))
+* Update module github.com/klauspost/compress to v1.20.4 ([#618](https://github.com/d0ugal/mosquitto-exporter/issues/618)) ([a1157c6](https://github.com/d0ugal/mosquitto-exporter/commit/a1157c6158a4f7718ec9b054c50f01abcdba0ede))
+* Update module go.mongodb.org/mongo-driver/v2 to v2.10.0 ([#614](https://github.com/d0ugal/mosquitto-exporter/issues/614)) ([606e9c0](https://github.com/d0ugal/mosquitto-exporter/commit/606e9c0cb3791a7f23250ed302aae7df1eb5e0db))
+* Update module golang.org/x/arch to v0.33.0 ([#619](https://github.com/d0ugal/mosquitto-exporter/issues/619)) ([b7e8298](https://github.com/d0ugal/mosquitto-exporter/commit/b7e82983bde362585f11bb103264a8b095dce33d))
+* Update module golang.org/x/sync to v0.25.0 ([#622](https://github.com/d0ugal/mosquitto-exporter/issues/622)) ([4fbb3f5](https://github.com/d0ugal/mosquitto-exporter/commit/4fbb3f5a19cc7d313079330811d3569a5d81808c))
+
 ## [0.2.60](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.59...v0.2.60) (2026-11-06)
 
 
