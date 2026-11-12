@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.62](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.61...v0.2.62) (2026-11-12)
+
+
+### Bug Fixes
+
+* Update go toolchain directive to v1.27.4 ([#627](https://github.com/d0ugal/mosquitto-exporter/issues/627)) ([0ae37a2](https://github.com/d0ugal/mosquitto-exporter/commit/0ae37a22d65e7eee0687d3a61dd9ce282e150b82))
+* Update module github.com/d0ugal/promexporter to v1.14.76 ([#628](https://github.com/d0ugal/mosquitto-exporter/issues/628)) ([1c68808](https://github.com/d0ugal/mosquitto-exporter/commit/1c68808d3406cd85270aae127ca65a016ab0d24b))
+* Update module github.com/d0ugal/promexporter to v1.14.77 ([#632](https://github.com/d0ugal/mosquitto-exporter/issues/632)) ([8686c70](https://github.com/d0ugal/mosquitto-exporter/commit/8686c707d407259862445774912e5c1167dfca3f))
+* Update module github.com/grafana/pyroscope-go to v1.5.0 ([#629](https://github.com/d0ugal/mosquitto-exporter/issues/629)) ([5e1e717](https://github.com/d0ugal/mosquitto-exporter/commit/5e1e7173d91460251b345d27266aff959068af64))
+* Update module github.com/prometheus/common to v0.74.0 ([#633](https://github.com/d0ugal/mosquitto-exporter/issues/633)) ([bfca206](https://github.com/d0ugal/mosquitto-exporter/commit/bfca2069446352f033be2131554c24b4a5b6d1e1))
+* Update module golang.org/x/crypto to v0.59.0 ([#631](https://github.com/d0ugal/mosquitto-exporter/issues/631)) ([fe81914](https://github.com/d0ugal/mosquitto-exporter/commit/fe81914a6e99153f3b88665b2b6d080105a20814))
+* Update module golang.org/x/sys to v0.50.0 ([#623](https://github.com/d0ugal/mosquitto-exporter/issues/623)) ([9686965](https://github.com/d0ugal/mosquitto-exporter/commit/96869652540ec8f7955997d931edd96218651674))
+* Update module golang.org/x/text to v0.44.0 ([#624](https://github.com/d0ugal/mosquitto-exporter/issues/624)) ([19926a3](https://github.com/d0ugal/mosquitto-exporter/commit/19926a3bdc0cf95782c53fd7b681acd8250f348c))
+
 ## [0.2.61](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.60...v0.2.61) (2026-11-10)
 
 
