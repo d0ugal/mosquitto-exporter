@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.63](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.62...v0.2.63) (2026-11-17)
+
+
+### Bug Fixes
+
+* Update module github.com/grpc-ecosystem/grpc-gateway/v2 to v2.34.0 ([#638](https://github.com/d0ugal/mosquitto-exporter/issues/638)) ([dba9ac4](https://github.com/d0ugal/mosquitto-exporter/commit/dba9ac4037ff990143683194674ad842551fc496))
+
 ## [0.2.62](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.61...v0.2.62) (2026-11-17)
 
 
