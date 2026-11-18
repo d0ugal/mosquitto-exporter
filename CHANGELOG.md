@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.64](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.63...v0.2.64) (2026-11-18)
+
+
+### Bug Fixes
+
+* Update module golang.org/x/net to v0.63.0 ([#640](https://github.com/d0ugal/mosquitto-exporter/issues/640)) ([9f6deef](https://github.com/d0ugal/mosquitto-exporter/commit/9f6deefbd695467c25b143b8a23e5c4967cec44c))
+
 ## [0.2.63](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.62...v0.2.63) (2026-11-17)
 
 
