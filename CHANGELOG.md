@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.66](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.65...v0.2.66) (2026-11-20)
+
+
+### Bug Fixes
+
+* Update module github.com/d0ugal/promexporter to v1.14.78 ([#649](https://github.com/d0ugal/mosquitto-exporter/issues/649)) ([aa2aff0](https://github.com/d0ugal/mosquitto-exporter/commit/aa2aff0a4cb63043ade4ffc24f8ac6fcda268fd3))
+* Update module github.com/klauspost/compress to v1.20.5 ([#647](https://github.com/d0ugal/mosquitto-exporter/issues/647)) ([2457693](https://github.com/d0ugal/mosquitto-exporter/commit/24576931e4e8c750273220300ec7339bdd2be63b))
+* Update module go.opentelemetry.io/auto/sdk to v1.2.2 ([#650](https://github.com/d0ugal/mosquitto-exporter/issues/650)) ([7191fdc](https://github.com/d0ugal/mosquitto-exporter/commit/7191fdc5614a9247ddb4b0180ddc956d863705c7))
+
 ## [0.2.65](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.64...v0.2.65) (2026-11-19)
 
 
