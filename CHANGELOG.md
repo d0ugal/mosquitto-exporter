@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.66](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.65...v0.2.66) (2026-11-24)
+
+
+### Bug Fixes
+
+* Update google.golang.org/genproto/googleapis/api digest to 1e707ab ([#651](https://github.com/d0ugal/mosquitto-exporter/issues/651)) ([40c4bcd](https://github.com/d0ugal/mosquitto-exporter/commit/40c4bcdcd2d46ad733bd76bb99e2159fd08186b2))
+* Update google.golang.org/genproto/googleapis/rpc digest to 1e707ab ([#652](https://github.com/d0ugal/mosquitto-exporter/issues/652)) ([69be338](https://github.com/d0ugal/mosquitto-exporter/commit/69be3382baaff459dc73ea32ed15263f8bb990cc))
+* Update module github.com/d0ugal/promexporter to v1.14.78 ([#649](https://github.com/d0ugal/mosquitto-exporter/issues/649)) ([aa2aff0](https://github.com/d0ugal/mosquitto-exporter/commit/aa2aff0a4cb63043ade4ffc24f8ac6fcda268fd3))
+* Update module github.com/eclipse/paho.mqtt.golang to v1.5.2 ([#654](https://github.com/d0ugal/mosquitto-exporter/issues/654)) ([d640b0d](https://github.com/d0ugal/mosquitto-exporter/commit/d640b0daaeab67dc2e6867d348240c27f37e2073))
+* Update module github.com/klauspost/compress to v1.20.5 ([#647](https://github.com/d0ugal/mosquitto-exporter/issues/647)) ([2457693](https://github.com/d0ugal/mosquitto-exporter/commit/24576931e4e8c750273220300ec7339bdd2be63b))
+* Update module github.com/quic-go/quic-go to v0.66.0 ([#653](https://github.com/d0ugal/mosquitto-exporter/issues/653)) ([359d463](https://github.com/d0ugal/mosquitto-exporter/commit/359d463deeb414b519b208cbd531f3fb83d5a89f))
+* Update module go.opentelemetry.io/auto/sdk to v1.2.2 ([#650](https://github.com/d0ugal/mosquitto-exporter/issues/650)) ([7191fdc](https://github.com/d0ugal/mosquitto-exporter/commit/7191fdc5614a9247ddb4b0180ddc956d863705c7))
+
 ## [0.2.65](https://github.com/d0ugal/mosquitto-exporter/compare/v0.2.64...v0.2.65) (2026-11-19)
 
 
